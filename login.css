@@ -1,0 +1,119 @@
+/* Fuente y reseteo de márgenes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de la imagen */
+.image-section {
+    width: 50%;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección del formulario */
+.login-section {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón */
+button {
+    margin-top: 20px;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+/* Enlace de registro */
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* 🔹 Diseño Responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .image-section {
+        width: 100%;
+        height: 200px;
+    }
+
+    .login-section {
+        width: 100%;
+        padding: 20px;
+    }
+}
