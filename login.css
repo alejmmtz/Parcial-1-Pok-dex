@@ -1,119 +1,102 @@
-/* Fuente y reseteo de márgenes */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+* {
+    margin: 0px;
+    padding: opx;
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+  }
+  
+  .split {
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
+  }
 
-/* Contenedor principal */
-.container {
-    display: flex;
-    width: 800px;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Sección de la imagen */
-.image-section {
-    width: 50%;
-}
-
-.image-section img {
+  .left {
+    flex: 1.2;
+    overflow: clip;
+  }
+  
+  .left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Sección del formulario */
-.login-section {
-    width: 50%;
-    padding: 40px;
+    object-position: bottom;
+  }
+  
+  .right {
+    flex: 1;            
+    background-color: #eeeeee;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-p {
-    color: #666;
-}
-
-/* Estilos del formulario */
-form {
+    justify-content: center; 
+    padding: 0 50px;        
+  }
+  
+  .right h2 {
+    font-size: 35px;
+    color: #1d1d1b;
+    margin-top: 100px;
+    margin-bottom: -90px;
+  }
+  
+  .subtitle {
+    font-size: 25px;
+    font-weight: 400;
+    color: #1d1d1b;
+    margin-bottom: -50px;
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-}
-
-label {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Botón */
-button {
-    margin-top: 20px;
-    background-color: #1d4ed8;
-    color: white;
+  }
+  
+  label {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #1d1d1b;
+  }
+  
+  input {
+    padding: 15px;
+    margin-bottom: 10px;
     border: none;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 16px;
+  }
+  
+  button {
+    background-color: #1f356b;
+    color: #eeeeee;
+    width: 150px;
+    padding: 13px;
+    border: none;
+    border-radius: 50px;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: medium;
+    display: block;      
+    margin: 10px  auto;
+    margin-top: 25px;    
+    text-align: center;  
 }
 
-button:hover {
-    background-color: #1e40af;
-}
-
-/* Enlace de registro */
-.signup-text {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.signup-text a {
-    color: #1d4ed8;
+  button:hover {
+    background-color: #0b5ed7;
+  }
+  
+  .signup-text {
+    font-size: small;
+    color: grey;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .signup-text a {
+    color: #1f356b;
     text-decoration: none;
-}
-
-.signup-text a:hover {
+  }
+  
+  .signup-text a:hover {
     text-decoration: underline;
-}
-
-/* 🔹 Diseño Responsivo */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .image-section {
-        width: 100%;
-        height: 200px;
-    }
-
-    .login-section {
-        width: 100%;
-        padding: 20px;
-    }
-}
+  }
