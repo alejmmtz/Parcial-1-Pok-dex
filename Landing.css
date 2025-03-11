@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+    background-color: #e7dede;
+    color: #1d1d1b;
+}
+header {
+    display: flex;
+}
+.amarillo {
+    width: 100%;
+    height: 613px;
+    margin-top: 0;
+    background-color: #feca05;
+    position: relative;
+    z-index: 0;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    text-align: left;
+}
+.texto {
+    max-width: 50%;
+}
+.texto h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 15px 0;
+}
+.texto h2 {
+    font-size: 1.97em;
+    line-height: 1;
+    font-family: dm sans;
+}
+.texto h3 {
+    font-size: 19px;
+    line-height: 1;
+    font-family: dm sans;
+    line-height: 0.6;
+}
+.texto button {
+    background-color: #003A70;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover {
+    box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+}
+.pikachu-imagen {
+    width: 410px;
+    position: relative;
+    bottom: 0;
+    right: 20px;
+    z-index: 2;
+    left: 150px;
+    bottom: 500px;
+}
+.pokeball-imagen {
+    width: 590px;
+    position: relative;
+    bottom: 0;
+    right: 20px;
+    z-index: 1;
+    left: 740px;
+    bottom: 698px;
+    transform: rotate(16deg);
+    opacity: 0.6;
+}
+.carrusel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.carrusel-imagen-1 {
+    width: 480px;
+    height: 350px;
+    z-index: 2;
+    border-radius: 2%;
+}
+.carrusel-imagen-2 {
+    width: 350px;
+    height: 270px;
+    z-index: 1;
+    border-radius: 2%;
+    bottom: 37px;
+    right: 100px;
+    opacity: 0.7;
+}
+.carrusel-imagen-3 {
+    width: 350px;
+    height: 270px;
+    z-index: 1;
+    border-radius: 2%;
+    bottom: 37px;
+    left: 10px;
+    opacity: 0.7;
+}
+.flecha1 {
+    width: 80px;
+    position: relative;
+    z-index: 2;
+    left: 37px;
+    transform: rotate(-540deg);
+    opacity: 0.75;
+    cursor: pointer;
+}
+.flecha1:hover {
+    opacity: 1;
+}
+.flecha2 {
+    width: 80px;
+    position: relative;
+    z-index: 2;
+    right: 37px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+.flecha2:hover {
+    opacity: 1;
+}
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+    background-color: #e7dede;
+}
+.perfil {
+    text-align: center;
+    max-width: 210px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.perfil:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.perfil-imagen {
+    width: 150px;
+    height: 95px;
+    border-radius: 80%;
+    border: none;
+}
+.perfil h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #1d1d1b;
+}
+.perfil-title {
+    font-size: 0.9rem;
+    color: #1d1d1b;
+    margin-bottom: 5px;
+}
+.perfil-enlace {
+    font-size: 0.9rem;
+    color: #1f1d1d;
+    margin-top: 5px;
+}
+.perfil-descripcion {
+    font-size: 0.8rem;
+    color: #1d1d1b;
+}
