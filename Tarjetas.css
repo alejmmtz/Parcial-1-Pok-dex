@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+    background-color: #e7dede;
+    color: #1d1d1b;
+}
+.Espacio {
+    max-width: 900px;
+    height: 613px;
+    margin-top: 0;
+    background-color: #e7dede;
+    position: relative;
+    z-index: 0;
+}
+.informacion-principal {
+    text-align: center;
+    padding: 20px;
+}
+.imagen-pokemon {
+    width: 150px;
+    margin-bottom: 15px;
+}
+h1 {
+    color: #1d1d1b;
+    margin: 0;
+}
+h2 {
+    color: #1d1d1b;
+    margin: 5px 0;
+}
+.descripcion {
+    font-style: italic;
+    color: #1d1d1b;
+}
+.inforamcion ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.informacion li {
+    font-size: 1rem;
+    margin: 5px 0;
+    color:#1d1d1b
+}
+.posiciones {
+    text-align: center;
+    margin-top: 20px;
+}
+.imagen-posiciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.imagenes-posiciones img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #d1c7c7;
+}
