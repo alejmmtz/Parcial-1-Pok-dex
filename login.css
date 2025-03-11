@@ -25,8 +25,8 @@
   }
   
   .right {
-    flex: 1;            
-    background-color: #eeeeee;
+    flex: 1;           
+    background-color: #e7dede;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -36,15 +36,15 @@
   .right h2 {
     font-size: 35px;
     color: #1d1d1b;
-    margin-top: 250px;
-    margin-bottom: -225px;
+    margin-top: 150px;
+    margin-bottom: -60px;
   }
   
   .subtitle {
     font-size: 25px;
     font-weight: 400;
     color: #1d1d1b;
-    margin-bottom: -150px;
+    margin-bottom: 10px;
   }
   
   form {
