@@ -1,7 +1,8 @@
 * {
     margin: 0px;
-    padding: opx;
+    padding: 0px;
     height: 100%;
+    background-color: #eeeeee;
   }
   
   body {
@@ -26,7 +27,7 @@
   
   .right {
     flex: 1;            
-    background-color: #e7dede;
+    background-color: #eeeeee;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -36,15 +37,15 @@
   .right h2 {
     font-size: 35px;
     color: #1d1d1b;
-    margin-top: 100px;
-    margin-bottom: -60px;
+    margin-top: 50px;
+    margin-bottom: max 75px;
   }
   
   .subtitle {
     font-size: 25px;
     font-weight: 400;
     color: #1d1d1b;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   
   form {
@@ -63,6 +64,7 @@
     padding: 15px;
     margin-bottom: 10px;
     border: none;
+    background-color: white;
   }
   
   button {
@@ -81,15 +83,16 @@
     text-align: center;  
 }
 
-  button:hover {
-    background-color: #0b5ed7;
-  }
+button:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+}
   
   .signup-text {
     font-size: small;
     color: grey;
     justify-content: center;
     text-align: center;
+    margin-bottom: 50px;
   }
   
   .signup-text a {
