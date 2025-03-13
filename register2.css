@@ -7,24 +7,27 @@
   
   /* Estilo general del body */
   body {
-    background-color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
   }
   
   /* Título principal */
   .main-heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: normal;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 300;
     margin-top: 40px;
     margin-bottom: 40px;
-    color: #333;
+    margin-left: 225px;
+    color: #1d1d1b;
+
+    span {
+      font-weight: bold;
+    }
   }
   
-  /* Contenedor de la tarjeta */
   .card {
     width: 80%;               /* Ajusta el ancho a tu gusto */
-    max-width: 1000px;        /* Máximo ancho para pantallas grandes */
+    max-width: 1200px;        /* Máximo ancho para pantallas grandes */
     margin: 0 auto;           /* Centra horizontalmente */
     display: flex;
     border-radius: 20px;
@@ -35,13 +38,13 @@
   /* Sección izquierda (fondo azul) */
   .left-section {
     background-color: #1f356b;
-    width: 40%;               /* Ocupa el 40% del espacio */
-    color: #fff;
-    padding: 40px 20px;
+    color: #eeeeee;
+    padding: 40px 25px;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: center;      /* Centra horizontalmente el contenido */
-    justify-content: center;  /* Centra verticalmente el contenido */
+    align-items: center;
+    justify-content: center; 
     text-align: center;
   }
   
@@ -75,37 +78,40 @@
   
   /* Texto destacado */
   .highlight {
-    font-size: 1.2rem;
+    font-size: 35px;
     font-weight: bold;
     margin: 15px 0;
   }
   
   /* Botón */
-  .btn {
+  .button {
     display: inline-block;
-    background-color: #fff;
+    background-color: #eeeeee;
     color: #1f356b;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
     margin-top: 10px;
   }
   
-  .btn:hover {
-    background-color: #dddddd;
+  .button:hover {
+    box-shadow: 0 0 10px 3px rgba(238, 239, 239, 0.7);
   }
   
   /* Sección derecha (imagen) */
   .right-section {
-    width: 60%;   /* Ocupa el 60% del espacio */
+    flex: 1;
+    overflow: clip;
+    max-height: 500px;
   }
   
   .scene {
+    display: flex;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    object-fit: cover;
+    object-position: top;
   }
   
   /* Responsivo para pantallas pequeñas */
