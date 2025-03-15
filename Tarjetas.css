@@ -9,8 +9,6 @@ body {
     flex-direction: row;
     width: auto;
     height: auto;
-    margin-top: 0;
-    z-index: 0;
     /*overflow: hidden;*/ 
     margin: 0px;
 }
@@ -24,7 +22,7 @@ body {
 .texto {
     max-width: 50%;
     margin-left: 4%;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 .texto h1 {
     font-size: 2.5em;
@@ -72,16 +70,15 @@ body {
 .contenedor1 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-right: 449px;
+    margin-right: 300px;
+    justify-content: left;
 }
 .rectangulo {
     display: flex;
     height: 50px;
-    width: 160px;
+    width: 125px;
     border-radius: 20px;
-    background-color: rgb(106, 183, 231);
+    background-color: #6D4A1D;
     color: #e7dede;
     align-items: center;
     justify-content: center;
@@ -91,10 +88,10 @@ body {
 .rectangulo2 {
     display: flex;
     height: 50px;
-    width: 160px;
+    width: 125px;
     border-radius: 20px;
-    background-color: rgb(243, 148, 70);
-    color: #e7dede;
+    background-color: #FBDB00;
+    color: #1d1d1b;
     align-items: center;
     justify-content: center;
     font-weight: 600;
@@ -105,8 +102,8 @@ body {
     height: 50px;
     width: 125px;
     border-radius: 20px;
-    background-color: rgb(87, 68, 9);
-    color: #e7dede;
+    background-color: #9AC7EC;
+    color: #1d1d1b;
     align-items: center;
     justify-content: center;
     font-weight: 600;
@@ -125,7 +122,7 @@ body {
     margin: 18px 0;
     font-weight: 600;
     margin-top: 2px;
-    margin-left: 77px;
+    margin-left: 53px;
 }
 .texto3 {
     font-size: 15px;
@@ -135,7 +132,27 @@ body {
     margin-top: 17px;
 }
 .imagen-pokemon {
-    background-image: url(Elementos/PRUEBA.png);
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-image: url(Elementos/Electrico.png);
     width: 50%;
     height: 100vh;
+}
+.pokemon-main {
+    width: 90%;
+    height: 90%;
+    margin-top: 36px;
+    margin-left: 30px;
+}
+.sprites-img {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    flex-direction: row;
+    gap: 110px;
+    width: 130px;
+    height: 130px;
+    margin-top: 34%;
+    right: 85%;
 }
