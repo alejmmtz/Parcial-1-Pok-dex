@@ -26,7 +26,7 @@
   }
   
   .card {
-    width: 80%;               /* Ajusta el ancho a tu gusto */
+    width: 80%;               /* Ajusta el ancho a tu 
     max-width: 1200px;        /* Máximo ancho para pantallas grandes */
     margin: 0 auto;           /* Centra horizontalmente */
     display: flex;
