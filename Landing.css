@@ -44,6 +44,13 @@ header {
     font-family: dm sans;
     line-height: 0.6;
 }
+.enlace {
+    font-size: 17px;
+    line-height: 1;
+    font-weight: bold;
+    font-family: dm sans;
+    line-height: 0.6;
+}
 .texto button {
     background-color: #003A70;
     color: #fff;
@@ -61,17 +68,18 @@ button:hover {
     position: relative;
     bottom: 0;
     z-index: 2;
-    left: 300px;
+    left: 380px;
     bottom: 500px;
 }
 .pokeball-imagen {
-    width: 590px;
+    width: 345px;
     position: relative;
     bottom: 0;
     z-index: 1;
     left: 850px;
     bottom: 698px;
     opacity: 0.6;
+    transform: rotate(15deg);
 }
 .carrusel {
     display: flex;
@@ -103,23 +111,23 @@ button:hover {
     opacity: 0.7;
 }
 .flecha1 {
-    width: 80px;
+    width: 65px;
     position: relative;
     z-index: 2;
-    left: 37px;
+    left: 35px;
     transform: rotate(-540deg);
-    opacity: 0.75;
+    opacity: 0.7;
     cursor: pointer;
 }
 .flecha1:hover {
     opacity: 1;
 }
 .flecha2 {
-    width: 80px;
+    width: 65px;
     position: relative;
     z-index: 2;
-    right: 37px;
-    opacity: 0.75;
+    right: 35px;
+    opacity: 0.7;
     cursor: pointer;
 }
 .flecha2:hover {
