@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>Pokémon Database</title>
+  <link rel="stylesheet" href="account-edit.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <div class="header-container">
+    <h1 class="welcome-message">Edit Your Account Information.</h1>
+  </div>
+  <main class="container">
+    <section class="left-column">
+      <div class="user-info">
+        <img 
+          src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true" 
+          alt="Avatar Pikachu" 
+          class="avatar"
+        >
+        <div class="text-info">
+          <h2>Alejandro</h2>
+          <p>@alejmmtz</p>
+          <p>Account created in March 13, 2025.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="user-email">Current User Email</label>
+        <div class="input-change-group">
+          <input 
+            type="email" 
+            id="user-email" 
+            class="input-text" 
+            value="alejomum@gmail.com"
+          />
+          <a href="#changeemail" class="change-btn">Change</a>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Change Your Password</label>
+        <div class="input-change-group">
+          <input 
+            type="password" 
+            id="password" 
+            class="input-text" 
+            placeholder="********"
+          />
+          <a href="#changepassword" class="change-btn">Change</a>
+        </div>
+      </div>
+    </section>
+    <section class="right-column"></section>
+  </main>
+  <section>
+    <button class="logout-btn">Log out</button>
+    <button class="goback-btn">Go back</button>
+  </section>
+
+  <div id="changepassword" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">&times;</a>
+      <h2 class="modal-title">Change Your Password</h2>
+      <form class="modal-form">
+        <label for="current-pass">Current Password</label>
+        <input type="password" id="current-pass" placeholder="Write Your Current Password">
+        <label for="new-pass">New Password</label>
+        <input type="password" id="new-pass">
+        <label for="confirm-pass">Confirm New Password</label>
+        <input type="password" id="confirm-pass">
+        <button type="submit" class="ok-btn">OK</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="changeemail" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">&times;</a>
+      <h2 class="modal-title">We've sent an email to confirm the change of your Current User Email, please confirm it.</h2>
+</body>
+</html>

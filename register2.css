@@ -1,127 +1,130 @@
-/* Reseteo básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Estilo general del body */
-  body {
-    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
-  }
-  
-  /* Título principal */
-  .main-heading {
-    text-align: left;
-    font-size: 35px;
-    font-weight: 300;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 225px;
-    color: #1d1d1b;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    span {
-      font-weight: bold;
-    }
-  }
-  
-  .card {
-    width: 80%;               /* Ajusta el ancho a tu gusto */
-    max-width: 1200px;        /* Máximo ancho para pantallas grandes */
-    margin: 0 auto;           /* Centra horizontalmente */
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;         /* Para que los bordes sean redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Sección izquierda (fondo azul) */
-  .left-section {
-    background-color: #1f356b;
-    color: #eeeeee;
-    padding: 40px 25px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-  }
-  
-  /* Avatar redondo */
-  .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    border: 3px solid #fff;
-  }
-  
-  /* Estilo del nombre de usuario */
-  .left-section h2 {
-    margin: 10px 0 5px;
-    font-size: 1.5rem;
-  }
-  
-  /* Estilo del @handle */
-  .handle {
-    opacity: 0.8;
-    margin-bottom: 15px;
-  }
-  
-  /* Texto genérico */
-  .info {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin-bottom: 10px;
-  }
-  
-  /* Texto destacado */
-  .highlight {
-    font-size: 35px;
+body {
+  font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+}
+
+.header-container {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 10%;
+
+  span {
     font-weight: bold;
-    margin: 15px 0;
   }
-  
-  /* Botón */
-  .button {
-    display: inline-block;
-    background-color: #eeeeee;
-    color: #1f356b;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    margin-top: 10px;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
   }
-  
-  .button:hover {
-    box-shadow: 0 0 10px 3px rgba(238, 239, 239, 0.7);
+}
+
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto 60px;      
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+.left-column {
+  width: 50%;
+  background-color: #1f356b; 
+  color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.text-info {
+
+  h2 {
+    font-size: 25px;
+    margin-bottom: 0px;
   }
+
+  p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.email-instructions {
+  font-size: 15px;
+  opacity: 0.7;
+}
   
-  /* Sección derecha (imagen) */
-  .right-section {
-    flex: 1;
-    overflow: clip;
-    max-height: 500px;
-  }
-  
-  .scene {
-    display: flex;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-  
-  /* Responsivo para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .card {
-      flex-direction: column;
-    }
-    .left-section,
-    .right-section {
-      width: 100%;
-    }
-  }
-  
+}
+
+
+.catchphrase {
+  font-size: 30px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pokedex-section {
+  margin-top: 20px;
+}
+
+.pokedex-btn {
+  background-color: #eeeeee;
+  color: #1f356b;
+  width: 150px;
+  padding: 13px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;      
+  margin: 10px  auto; 
+  text-align: center;  
+}
+
+.pokedex-btn:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+}
+
+.pokedex-description {
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.right-column {
+  width: 50%;
+  background: url("https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/Login%20Image.png?raw=true")
+              no-repeat center/cover;
+  min-height: 250px; 
+  max-height: 800px;
+}
+

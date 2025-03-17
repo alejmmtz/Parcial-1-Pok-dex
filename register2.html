@@ -11,46 +11,43 @@
 
 </head>
 <body>
+  <!-- Encabezado principal -->
+  <div class="header-container">
+    <h1 class="welcome-message">We are happy to have you here, <span>Alejandro</span></h1>
+  </div>
 
-    <!-- Título principal -->
-    <h1 class="main-heading">We are happy to have you here, <span>Alejandro</span></h1>
-  
-    <!-- Tarjeta principal -->
-    <div class="card">
-      <div class="left-section">
-        <!-- Avatar circular -->
-        <img
-          class="avatar" src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true" alt="User Avatar"/>
-        <h2>Alejandro</h2>
-        <p class="handle">@alejmmtz</p>
-        
-        <!-- Texto informativo -->
-        <p class="info">
-          We have sent an Email for you to confirm the creation of your account.
-          Please open it and confirm your registration.
-        </p>
-  
-        <!-- Texto destacado -->
-        <p class="highlight">Gotta catch 'em all!</p>
-  
-        <!-- Texto extra -->
-        <p class="info">
-          Here you can find your Pokédex. You can look up any Pokémon that you know!
-        </p>
-  
-        <!-- Botón -->
-        <a href="#" class="button">Pokédex</a>
+  <main class="container">
+    <section class="left-column">
+      <div class="user-info">
+        <img 
+          src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true" 
+          alt="Avatar Pikachu" 
+          class="avatar"
+        >
+        <div class="text-info">
+          <h2 >Alejandro</h2>
+          <p>@alejmmtz</p>
+          <p>
+            We have sent an Email for you to confirm the creation of your account.
+            Please open it and Confirm your Registration.
+          </p>
+        </div>
       </div>
-  
-      <!-- Sección derecha (imagen) -->
-      <div class="right-section">
-        <img
-          class="scene"
-          src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/Login%20Image.png?raw=true"
-          alt="Pokémon Scene"
-        />
+
+      <h1 class="catchphrase">Gotta catch 'em all!</h1>
+
+      <div class="pokedex-section">
+        <p class="pokedex-description">
+          Here you can find your Pokédex <br>
+          You can look up for any Pokémon that you know!
+        </p>
+        <button class="pokedex-btn" onclick="location.href='landing.html'">Pokédex</button>
       </div>
-    </div>
-  
-  </body>
-  </html>
+    </section>
+
+
+    <section class="right-column">
+</section>
+  </main>
+</body>
+</html>

@@ -127,24 +127,10 @@ body {
 .texto3 {
     font-size: 15px;
     line-height: 1;
-    margin: 18px 0;
     font-weight: 600;
-    margin-top: 17px;
+    margin-top: 100px;
 }
-.imagen-pokemon {
-    display: flex;
-    position: relative;
-    z-index: 1;
-    background-image: url(Elementos/Electrico.png);
-    width: 50%;
-    height: 100vh;
-}
-.pokemon-main {
-    width: 90%;
-    height: 90%;
-    margin-top: 36px;
-    margin-left: 30px;
-}
+
 .sprites-img {
     display: flex;
     position: absolute;
