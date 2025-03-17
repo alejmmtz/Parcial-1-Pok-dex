@@ -13,7 +13,7 @@
 <body>
   <!-- Encabezado principal -->
   <div class="header-container">
-    <h1 class="welcome-message">Edit Account Information, <span>Alejandro</span></h1>
+    <h1 class="welcome-message">Edit Your Account Information.</h1>
   </div>
 
   <main class="container">
@@ -34,20 +34,43 @@
         </div>
       </div>
 
-      <h1 class="catchphrase">Gotta catch 'em all!</h1>
+      <div class="form-group">
+        <label disable for="user-email">Current User Email</label>
+        <div class="input-change-group">
+          <input 
+            type="email" 
+            id="user-email" 
+            class="input-text" 
+            value="alejomum@gmail.com"
+          />
+          <button class="change-btn">Change</button>
+        </div>
+      </div>
 
-      <div class="pokedex-section">
-        <p class="pokedex-description">
-          Here you can find your Pokédex <br>
-          You can look up for any Pokémon that you know!
-        </p>
-        <button class="pokedex-btn" onclick="location.href='landing.html'">Pokédex</button>
+      <div class="form-group">
+        <label for="password">Change Your Password</label>
+        <div class="input-change-group">
+          <input 
+            type="password" 
+            id="password" 
+            class="input-text" 
+            placeholder="********"
+          />
+          <button class="change-btn">Change</button>
+        </div>
+      </div>
       </div>
     </section>
 
 
-    <section class="right-column">
-</section>
+    <section class="right-column"></section>
+
   </main>
+  
+<section>
+  <button class="logout-btn">Log out</button>
+</section>
+
+
 </body>
 </html>
