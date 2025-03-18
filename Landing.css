@@ -63,21 +63,36 @@ header {
 button:hover {
     box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
 }
+.seccion-imagenes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    bottom: 730px;
+}
+.seccion-imagenes2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    bottom: 1008px;
+    padding-right: 20px;
+}
 .pikachu-imagen {
     width: 410px;
-    position: relative;
-    bottom: 0;
     z-index: 2;
-    left: 380px;
-    bottom: 500px;
+    left: 700px;
+    margin-right: 110px;
 }
 .pokeball-imagen {
-    width: 345px;
-    position: relative;
-    bottom: 0;
+    width: 310px;
+    margin-right: 85px;
+    margin-bottom: 0;
     z-index: 1;
-    left: 850px;
-    bottom: 698px;
     opacity: 0.6;
     transform: rotate(15deg);
 }
@@ -114,9 +129,9 @@ button:hover {
     width: 65px;
     position: relative;
     z-index: 2;
-    left: 35px;
+    left: 29px;
     transform: rotate(-540deg);
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: pointer;
 }
 .flecha1:hover {
@@ -126,8 +141,8 @@ button:hover {
     width: 65px;
     position: relative;
     z-index: 2;
-    right: 35px;
-    opacity: 0.7;
+    right: 29px;
+    opacity: 0.6;
     cursor: pointer;
 }
 .flecha2:hover {
