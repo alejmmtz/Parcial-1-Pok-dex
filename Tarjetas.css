@@ -130,7 +130,15 @@ body {
     font-weight: 600;
     margin-top: 100px;
 }
-
+.imagen-pokemon {
+display: flex;
+position: relative;
+z-index: 4;
+width: 43%;
+height:33%;
+left: 680px;
+bottom: 560px;
+}
 .sprites-img {
     display: flex;
     position: absolute;
