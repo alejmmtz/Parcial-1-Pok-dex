@@ -5,16 +5,16 @@ body {
     background-color: #e7dede;
     color: #1d1d1b;
 }
-header {
-    display: flex;
-    width: 100%;
-}
+
+
 .amarillo {
-    width: 100%;
-    height: 613px;
-    margin-top: 0px;
-    padding: 0px;
+    max-width: 100%;
+    height: 800px;
+    margin: 0px 0px;
+    padding: 0px 0px;
     background-color: #feca05;
+    position: relative;
+    z-index: 0;
 }
 .main {
     justify-content: space-between;
@@ -23,49 +23,47 @@ header {
     text-align: left;
 }
 .texto {
-    max-width: 50%;
+    max-width: 70%;
 }
+
 .texto h1 {
-    font-size: 3em;
+    font-size: 50px;
     line-height: 1;
-    margin: 15px 0;
+    margin-top:300px;
 }
 .texto h2 {
-    font-size: 2em;
+    font-size: 50px;
     line-height: 1;
-    font-family: dm sans;
+    font-family: "DM Sans";
 }
 .texto h3 {
-    font-size: 19px;
+    font-size: 35px;
     line-height: 1;
     font-family: dm sans;
     line-height: 0.6;
+    font-weight: 500;
 }
-.enlace {
-    font-size: 17px;
-    line-height: 1;
-    font-weight: bold;
-    font-family: dm sans;
-    line-height: 0.6;
-}
-button {
+.texto button {
     background-color: #003A70;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border-radius: 20px;
+    padding: 20px 35px;
+    font-size: 25px;
+    border-radius: 50px;
     cursor: pointer;
+    position: relative;
+    z-index: 3;
 }
+
 button:hover {
     box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
 }
+
 .seccion-imagenes {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    width: 100%;
     height: 500px;
     bottom: 720px;
 }
@@ -74,25 +72,26 @@ button:hover {
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    width: 100%;
     height: 500px;
     bottom: 1008px;
     padding-right: 20px;
 }
 .pikachu-imagen {
-    width: 410px;
+    width: 600px;
     z-index: 2;
     left: 700px;
-    margin-right: 110px;
+    margin-right: 60px;
 }
+
 .pokeball-imagen {
-    width: 390px;
-    margin-right: 40px;
+    width: 500px;
+    margin-right: 70px;
     margin-bottom: 0;
     z-index: 1;
     opacity: 0.6;
     transform: rotate(15deg);
 }
+
 .carrusel {
     display: flex;
     position: relative;
