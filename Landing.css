@@ -6,6 +6,37 @@ body {
     color: #1d1d1b;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav a.login i {
+    margin-right: 5px;
+}
+
 
 .amarillo {
     max-width: 100%;
@@ -16,10 +47,13 @@ body {
     position: relative;
     z-index: 0;
 }
+
 .main {
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: left;
 }
 .texto {
@@ -27,20 +61,22 @@ body {
 }
 
 .texto h1 {
-    font-size: 50px;
+    font-size: 55px;
     line-height: 1;
     margin-top:300px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
 }
 .texto h2 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1;
-    font-family: "DM Sans";
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
 }
 .texto h3 {
     font-size: 35px;
     line-height: 1;
-    font-family: dm sans;
-    line-height: 0.6;
+    font-family: "DM Sans", sans-serif;
     font-weight: 500;
 }
 .texto button {
@@ -48,11 +84,13 @@ body {
     color: #fff;
     border: none;
     padding: 20px 35px;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
     position: relative;
     z-index: 3;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
 }
 
 button:hover {
@@ -77,7 +115,7 @@ button:hover {
     padding-right: 20px;
 }
 .pikachu-imagen {
-    width: 600px;
+    width: 475px;
     z-index: 2;
     left: 700px;
     margin-right: 60px;
@@ -86,7 +124,7 @@ button:hover {
 .pokeball-imagen {
     width: 500px;
     margin-right: 70px;
-    margin-bottom: 0;
+    margin-bottom: 70px;
     z-index: 1;
     opacity: 0.6;
     transform: rotate(15deg);
@@ -144,6 +182,7 @@ button:hover {
 .flecha2:hover {
     opacity: 1;
 }
+
 .about-us {
     display: flex;
     justify-content: center;
@@ -152,6 +191,7 @@ button:hover {
     padding: 50px;
     background-color: #e7dede;
 }
+
 .perfil {
     text-align: center;
     max-width: 210px;
