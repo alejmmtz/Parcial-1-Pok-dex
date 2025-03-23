@@ -6,27 +6,18 @@
   
   body {
     font-family: "Poppins", "DM Sans", sans-serif;
-    background-color: #f2f2f2;
+    background-image: url("https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/ZOOM_BG_goods_A_1920.jpg?raw=true");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     color: #333;
   }
   
-  .header-container {
-    text-align: left;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 10%;
-  }
-  
-  .header-container .welcome-message {
-    font-size: 40px;
-    font-weight: 700;
-    color: #333;
-  }
-  
+ 
   .container {
     display: flex;
     width: 80%;
-    margin: 0 auto 20px;      
+    margin: 5% auto 10px;      
     background-color: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -68,7 +59,7 @@
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   
   .form-group label {
@@ -230,6 +221,19 @@
   .ok-btn:hover {
     background-color: #e6b800;
   }
+
+  .emcabezadoin {
+    position: fixed; 
+    bottom: 0;    
+    top: 1;
+    width: 100%;  
+    background-color: #1d1d1b;
+    font-size: 15px;
+    color: #ddd;
+    text-align: center;
+    padding: 15px;
+    font-style: italic;
+}
   
 
   
