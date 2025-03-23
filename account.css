@@ -1,0 +1,298 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+    background-color: #e7dede;
+    color: #1d1d1b;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background-color: #e7dede;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.header1 {
+    margin-right: 50px;
+}
+
+.nav i {
+    margin-right: 15px;
+    font-size: 35px;
+}
+
+nav a:hover {
+    color: #003A70;
+}
+  
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+  
+  .greeting {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .highlight {
+    font-weight: 700;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+  }
+  
+  /* Columna Izquierda */
+  .left-column {
+    flex: 0 0 40%;
+    min-width: 300px;
+    position: relative;
+  }
+  
+  /* Imagen de fondo (Centro Pokémon) */
+  .bg-image {
+    width: 100%;
+    height: 250px;
+    background: url("https://raw.githubusercontent.com/alejmmtz/Parcial-1-Pok-dex/main/Elementos/985-20231202231601-af41d69a-5725-4eb8-bfe0-abbff65da011.jpg") 
+                no-repeat center/cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  /* Tarjeta de perfil */
+  .profile-card {
+    background-color: #1f356b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+
+  /* Nombre, handle y fecha */
+  .user-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  .user-handle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+  .account-date {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  /* Botones de la tarjeta */
+  .edit-btn,
+  .logout-btn {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Editar cuenta (blanco) */
+  .edit-btn {
+    background-color: #fff;
+    color: #1f356b;
+    margin-bottom: 10px;
+  }
+  .edit-btn:hover {
+    background-color: #eaeaea;
+  }
+  
+  /* Cerrar sesión (azul) */
+  .logout-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  .logout-btn:hover {
+    background-color: #2d468d;
+  }
+  
+  /* Columna Derecha */
+  .right-column {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Título de Pokémons favoritos */
+  .fav-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Contenedor de las cartas de Pokémon */
+  .pokemon-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  /* Carta individual */
+  .pokemon-card {
+    width: 130px;
+    background-color: #eee;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .pokemon-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  .pokemon-name {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  .pokemon-id {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  
+  /* Colores de fondo */
+  .purple {
+    background-color: #f2e1ff;
+  }
+  .green {
+    background-color: #d9f7d9;
+  }
+  
+  /* Botón 'More' */
+  .more-btn {
+    background-color: #1f356b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .more-btn:hover {
+    background-color: #2a447e;
+  }
+  
+  
+  .site-footer {
+    background-color: #1d1d1b;
+    color: #fff;
+    padding: 50px 100px;
+    margin-top: 100px;
+  }
+
+  
+  .footer-columns {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  
+ .footer-col {
+    display: flex;
+    flex-direction: row;
+ }
+
+ .footer-col i{
+margin-right: 20px;
+font-size: 30px;
+text-decoration: none;
+color: whitesmoke;
+ }
+
+  .footer-col h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-right: 100px;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Parte inferior del footer */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 0.85rem;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .legal-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  
