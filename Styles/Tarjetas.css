@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+    background-color: #e7dede;
 }
 
 .header {
@@ -50,7 +51,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -58,10 +59,14 @@ nav a:hover {
     flex: 1;
     color: #333;
 
+    i {
+        color: rgb(180, 12, 12);
+    }
+
 h1 {
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 h3 {
@@ -72,7 +77,7 @@ h3 {
 p {
     font-size: 18px;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 }
@@ -99,7 +104,6 @@ button {
     font-weight: bold;
     margin-right: 10px;
     border-radius: 20px;
-    cursor: pointer;
 }
 
 .water {
@@ -112,23 +116,22 @@ button {
     color: white;
 }
 
-.fire {
-    background-color: #FF7F50;
-    color: white;
+.electric {
+    background-color: #fffc50;
+    color: #1d1d1b;
 }
 
 .evolution-images {
     display: flex;
-    gap: 15px;
+    gap: 60px;
 }
 
 .evolution-images img {
     width: 80px;
-    height: auto;
 }
 
 .pokemon-image img {
-    width: 500px;
+    width: 600px;
 }
 
 
@@ -136,7 +139,7 @@ button {
     background-color: #1d1d1b;
     color: #fff;
     padding: 50px 100px;
-    margin-top: 0px;
+    margin-top: 50px;
   }
 
   
