@@ -5,15 +5,59 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+  font-family: "Poppins", "DM Sans", sans-serif;
+  background-color: #e7dede;
+  color: #333;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  background-color: #e7dede;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+.header1 {
+  margin-right: 50px;
+}
+
+.nav i {
+  margin-right: 15px;
+  font-size: 35px;
+}
+
+nav a:hover {
+  color: #003A70;
+}
+
+
 
 .header-container {
   text-align: left;
   margin-top: 40px;
   margin-bottom: 40px;
-  margin-left: 10%;
-
+margin-left: 10%;
   span {
     font-weight: bold;
   }
@@ -29,7 +73,7 @@ body {
 .container {
   display: flex;
   width: 80%;
-  margin: 0 auto 60px;      
+  margin: 0px auto 50px;    
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -128,3 +172,15 @@ body {
   max-height: 800px;
 }
 
+.emcabezadoin {
+  position: fixed; 
+  bottom: 0;    
+  top: 1;
+  width: 100%;  
+  background-color: #1d1d1b;
+  font-size: 15px;
+  color: #ddd;
+  text-align: center;
+  padding: 15px;
+  font-style: italic;
+}
