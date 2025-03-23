@@ -50,13 +50,13 @@ nav a:hover {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 40px auto;
   }
   
   .greeting {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: 400;
   }
   .highlight {
@@ -66,17 +66,16 @@ nav a:hover {
   .main-content {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+    flex-wrap: wrap; 
   }
   
-  /* Columna Izquierda */
   .left-column {
     flex: 0 0 40%;
     min-width: 300px;
     position: relative;
   }
   
-  /* Imagen de fondo (Centro Pokémon) */
+
   .bg-image {
     width: 100%;
     height: 250px;
@@ -85,8 +84,7 @@ nav a:hover {
     border-radius: 12px;
     margin-bottom: 20px;
   }
-  
-  /* Tarjeta de perfil */
+
   .profile-card {
     background-color: #1f356b;
     color: #fff;
@@ -97,23 +95,22 @@ nav a:hover {
   }
   
 
-  /* Nombre, handle y fecha */
   .user-name {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+    font-size: 30px;
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
   .user-handle {
-    font-size: 0.95rem;
+    font-size: 15px;
     opacity: 0.9;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
   }
   .account-date {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
     opacity: 0.9;
   }
   
-  /* Botones de la tarjeta */
   .edit-btn,
   .logout-btn {
     display: block;
@@ -126,18 +123,27 @@ nav a:hover {
     border: none;
     cursor: pointer;
   }
+
+  .edit,
+  .logout {
+    text-decoration: none;
+  }
+
+
+  .logout-btn a{
+    text-decoration: none;
+  }
   
-  /* Editar cuenta (blanco) */
   .edit-btn {
     background-color: #fff;
     color: #1f356b;
     margin-bottom: 10px;
   }
+
   .edit-btn:hover {
     background-color: #eaeaea;
   }
   
-  /* Cerrar sesión (azul) */
   .logout-btn {
     background-color: transparent;
     color: #fff;
