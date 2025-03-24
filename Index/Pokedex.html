@@ -31,39 +31,63 @@
     <div class="titulo">
         <h1>POKÉDEX</h1><br>
     </div>
-    
-    <section>
-        <div class="container">
-            <div class="search-filter">
-                <div class="search-box">
-                    <h2>Search by <br>Name or Number</h2>
-                    </label>
-                    <input type="text" id="search" placeholder="Pikachu">
-                    <button class="random-btn">Random Pokémon</button>
-                </div>
-                <div class="filter-box">
-                    <label for="type">
-                        <h2>Filter By</h2>
-                    </label>
-                    <select id="type">
-                        <option>Type</option>
-                    </select>
-                    <select id="weakness">
-                        <option>Weakness</option>
-                    </select>
-                </div>
-            </div>
-    </section>
-    
+   
+    <div class="subtitulo">
+      <h1>Search by <br>
+        Name or Number</h1><br>
+  </div>
+
+  <div class="search-section">
+    <div class="search-left">
+
+      <div class="search-input-group">
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Pikachu"
+        >
+        <button class="search-icon-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <button class="random-btn">
+        <i class="fa fa-random"></i> Random Pokémon
+      </button>
+      <button class="heart-btn">
+        <i class="fa fa-heart"></i>
+      </button>
+    </div>
+
+    <div class="filter-right">
+      <div class="filter-group">
+        <label for="type-select">Type</label>
+        <select id="type-select" class="filter-select">
+          <option value="">All Types</option>
+          <option value="grass">Grass</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="weakness-select">Weakness</label>
+        <select id="weakness-select" class="filter-select">
+          <option value="">All Weaknesses</option>
+          <option value="rock">Rock</option>
+          <option value="water">Water</option>
+          <option value="electric">Electric</option>
+        </select>
+      </div>
+    </div>
+  </div>
     
     <div class="container-grid">
       <div class="pokemon-grid">
   
-        <!-- 1. Bulbasaur -->
         <div class="pokemon">
           <div class="pokemon-card green">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" 
+              src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/001.png?raw=true" 
               alt="Bulbasaur"
             >
           </div>
@@ -71,11 +95,11 @@
           <p>001</p>
         </div>
   
-        <!-- 2. Ivysaur -->
+
         <div class="pokemon">
           <div class="pokemon-card green">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" 
+              src="" 
               alt="Ivysaur"
             >
           </div>
@@ -83,11 +107,11 @@
           <p>002</p>
         </div>
   
-        <!-- 3. Venusaur -->
+      
         <div class="pokemon">
           <div class="pokemon-card green">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" 
+              src="" 
               alt="Venusaur"
             >
           </div>
@@ -95,11 +119,11 @@
           <p>003</p>
         </div>
   
-        <!-- 4. Charmander -->
+  
         <div class="pokemon">
           <div class="pokemon-card orange">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" 
+              src="" 
               alt="Charmander"
             >
           </div>
@@ -107,11 +131,11 @@
           <p>004</p>
         </div>
   
-        <!-- 5. Charmeleon -->
+   
         <div class="pokemon">
           <div class="pokemon-card orange">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" 
+              src="" 
               alt="Charmeleon"
             >
           </div>
@@ -119,11 +143,11 @@
           <p>005</p>
         </div>
   
-        <!-- 6. Charizard -->
+    
         <div class="pokemon">
           <div class="pokemon-card orange">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" 
+              src="" 
               alt="Charizard"
             >
           </div>
@@ -131,11 +155,11 @@
           <p>006</p>
         </div>
   
-        <!-- 7. Squirtle -->
+
         <div class="pokemon">
           <div class="pokemon-card blue">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" 
+              src="" 
               alt="Squirtle"
             >
           </div>
@@ -143,11 +167,11 @@
           <p>007</p>
         </div>
   
-        <!-- 8. Wartortle -->
+   
         <div class="pokemon">
           <div class="pokemon-card blue">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" 
+              src="" 
               alt="Wartortle"
             >
           </div>
@@ -155,11 +179,11 @@
           <p>008</p>
         </div>
   
-        <!-- 9. Blastoise -->
+   
         <div class="pokemon">
           <div class="pokemon-card blue">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" 
+              src="" 
               alt="Blastoise"
             >
           </div>
@@ -167,11 +191,11 @@
           <p>009</p>
         </div>
   
-        <!-- 10. Caterpie -->
+   
         <div class="pokemon">
           <div class="pokemon-card green">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" 
+              src="" 
               alt="Caterpie"
             >
           </div>
@@ -179,11 +203,11 @@
           <p>010</p>
         </div>
   
-        <!-- 11. Metapod -->
+
         <div class="pokemon">
           <div class="pokemon-card green">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" 
+              src="" 
               alt="Metapod"
             >
           </div>
@@ -191,11 +215,11 @@
           <p>011</p>
         </div>
   
-        <!-- 12. Butterfree -->
+        
         <div class="pokemon">
           <div class="pokemon-card green">
             <img 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" 
+              src="" 
               alt="Butterfree"
             >
           </div>

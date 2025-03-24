@@ -56,54 +56,124 @@ body {
     padding-left: 100px;
 }
 
-.container {
-    max-width: 1000px;
-    margin-left: 100px;
+.subtitulo{
+  background-color: whitesmoke;
+  font-size: 15px;
+  margin-bottom: -50px;
+  padding-left: 100px;
 }
 
-.search-filter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+.search-section {
+  margin: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.search-box{
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-right: 50px;
+.search-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.filter-box {
-    margin-top: 35px;
-    min-width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+.search-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
- select, button {
-    padding: 10px 10px;
-    border-radius: 5px;
-    border: 3px solid #003A70;
-    width: 300px;
+.search-input {
+  font-size: 15px;
+  padding: 10px 40px 10px 15px;
+  border: 2px solid #1f356b;
+  border-radius: 6px;
+  outline: none;
+  width: 200px;
 }
-input{
-    border-radius: 5px;
-    border: 3px solid #003A70;
-    padding: 10px 10px;
+
+.search-icon-btn {
+  position: absolute;
+  color: #003A70;
+  right: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
+
+
+.icon-inline {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
 
 .random-btn {
-    background-color: #003A70;
-    width: 500px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 10px;
-    border: 3px solid #003A70;
+  background-color: #1f356b;
+  border: 2px solid #1f356b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.random-btn:hover {
+  background-color: #2a447e;
+}
+
+
+.heart-btn {
+  background: none;
+  border: 2px solid whitesmoke;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heart-btn img {
+  width: 30px;
+  height: 30px;
+}
+.heart-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.filter-right {
+  display: flex;
+  gap: 30px;
+}
+
+
+.filter-group {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-group label {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.filter-select {
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid #1f356b;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  width: 200px;
 }
 
 .container-grid {
