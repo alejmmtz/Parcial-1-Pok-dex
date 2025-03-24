@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<<<<<<< HEAD:Pokedex.html
-    <link rel="stylesheet" href="Pokedex.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-=======
-    <link rel="stylesheet" href="../Styles/Pokedex.css">
->>>>>>> d4c55be07f0f19e8b5bb2fd6b07c8476c5cda170:Index/Pokedex.html
+    <link rel="stylesheet" href="../Styles/Pokedex.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Pokédex</title>
 </head>
 <body>
-    <div class="emcabezado">
-        <p>© 2025 Pokémon. © 1995 - 2025 Nintendo / Creatures Inc / Game Freak inc. TM, ®Nintendo.</p>
-    </div>
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#" class="nav-item">Pokédex</a>
-            <a href="#" class="nav-item"><i class="fa fa-lock"></i>Login</a>
+    <header class="header">
+        <div class="logo">
+            <a href="Landing2.html">
+                <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/International_Pok%C3%A9mon_logo.svg.png?raw=true"
+                    alt="Pokémon Logo">
+            </a>
         </div>
-    </nav>
+        <nav class="nav">
+            <a class="header1" href="Pokedex.html">Pokédex</a>
+            <i class="fa fa-user-circle-o"></i>
+            <a href="account.html" class="login"> Alejandro </a>
+        </nav>
+    </header>
+
     
     <div class="titulo">
         <h1>POKÉDEX</h1><br>
@@ -31,9 +36,7 @@
         <div class="container">
             <div class="search-filter">
                 <div class="search-box">
-                    <h2>Search by </h2>
-                    <label for="search">
-                        <h2>Name or Number </h2>
+                    <h2>Search by <br>Name or Number</h2>
                     </label>
                     <input type="text" id="search" placeholder="Pikachu">
                     <button class="random-btn">Random Pokémon</button>
@@ -53,81 +56,197 @@
     </section>
     
     
-    <div class="pokedex-grid">
-        <div class="pokemon-card grass">
-            <img src="" alt="">
-            <p>Bulbasaur</p>
-            <span>001</span>
+    <div class="container-grid">
+      <div class="pokemon-grid">
+  
+        <!-- 1. Bulbasaur -->
+        <div class="pokemon">
+          <div class="pokemon-card green">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" 
+              alt="Bulbasaur"
+            >
+          </div>
+          <h3>Bulbasaur</h3>
+          <p>001</p>
         </div>
-    
-        <div class="pokemon-card grass">
-            <img src="" alt="">
-            <p>Ivysaur</p>
-            <span>002</span>
+  
+        <!-- 2. Ivysaur -->
+        <div class="pokemon">
+          <div class="pokemon-card green">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" 
+              alt="Ivysaur"
+            >
+          </div>
+          <h3>Ivysaur</h3>
+          <p>002</p>
         </div>
-    
-        <div class="pokemon-card grass">
-            <img src="" alt="">
-            <p>Venusaur</p>
-            <span>003</span>
+  
+        <!-- 3. Venusaur -->
+        <div class="pokemon">
+          <div class="pokemon-card green">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" 
+              alt="Venusaur"
+            >
+          </div>
+          <h3>Venusaur</h3>
+          <p>003</p>
         </div>
-    
-        <div class="pokemon-card fire">
-            <img src="" alt="">
-            <p>Charmander</p>
-            <span>004</span>
+  
+        <!-- 4. Charmander -->
+        <div class="pokemon">
+          <div class="pokemon-card orange">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" 
+              alt="Charmander"
+            >
+          </div>
+          <h3>Charmander</h3>
+          <p>004</p>
         </div>
-        <div class="pokemon-card fire">
-            <img src="" alt="">
-            <p>Charmeleon</p>
-            <span>005</span>
+  
+        <!-- 5. Charmeleon -->
+        <div class="pokemon">
+          <div class="pokemon-card orange">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" 
+              alt="Charmeleon"
+            >
+          </div>
+          <h3>Charmeleon</h3>
+          <p>005</p>
         </div>
-        <div class="pokemon-card fire">
-            <img src="" alt="">
-            <p>Charizard</p>
-            <span>006</span>
+  
+        <!-- 6. Charizard -->
+        <div class="pokemon">
+          <div class="pokemon-card orange">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" 
+              alt="Charizard"
+            >
+          </div>
+          <h3>Charizard</h3>
+          <p>006</p>
         </div>
-        <div class="pokemon-card water">
-            <img src="" alt="">
-            <p>Squirtle</p>
-            <span>007</span>
+  
+        <!-- 7. Squirtle -->
+        <div class="pokemon">
+          <div class="pokemon-card blue">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" 
+              alt="Squirtle"
+            >
+          </div>
+          <h3>Squirtle</h3>
+          <p>007</p>
         </div>
-        <div class="pokemon-card water">
-            <img src="" alt="">
-            <p>Wartortle</p>
-            <span>008</span>
+  
+        <!-- 8. Wartortle -->
+        <div class="pokemon">
+          <div class="pokemon-card blue">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" 
+              alt="Wartortle"
+            >
+          </div>
+          <h3>Wartortle</h3>
+          <p>008</p>
         </div>
-    
-        <div class="pokemon-card water">
-            <img src="" alt="">
-            <p>Blastoise</p>
-            <span>009</span>
+  
+        <!-- 9. Blastoise -->
+        <div class="pokemon">
+          <div class="pokemon-card blue">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" 
+              alt="Blastoise"
+            >
+          </div>
+          <h3>Blastoise</h3>
+          <p>009</p>
         </div>
-        <div class="pokemon-card bug">
-            <img src="" alt="">
-            <p>Caterpie</p>
-            <span>010</span>
+  
+        <!-- 10. Caterpie -->
+        <div class="pokemon">
+          <div class="pokemon-card green">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" 
+              alt="Caterpie"
+            >
+          </div>
+          <h3>Caterpie</h3>
+          <p>010</p>
         </div>
-        <div class="pokemon-card bug">
-            <img src="" alt="">
-            <p>Metapod</p>
-            <span>011</span>
+  
+        <!-- 11. Metapod -->
+        <div class="pokemon">
+          <div class="pokemon-card green">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" 
+              alt="Metapod"
+            >
+          </div>
+          <h3>Metapod</h3>
+          <p>011</p>
         </div>
-        <div class="pokemon-card bug">
-            <img src="" alt="">
-            <p>Butterfree</p>
-            <span>012</span>
+  
+        <!-- 12. Butterfree -->
+        <div class="pokemon">
+          <div class="pokemon-card green">
+            <img 
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" 
+              alt="Butterfree"
+            >
+          </div>
+          <h3>Butterfree</h3>
+          <p>012</p>
         </div>
-    
-    
+  
+      </div>
+      <button class="more-btn">More</button>
     </div>
-       <button class="more-btn">More</button>
-       
-    </div>
-    <footer class="emcabezadoin">
-        <p>© 2025 Pokémon. © 1995 - 2025 Nintendo / Creatures Inc / Game Freak inc. TM, ®Nintendo.</p>
-    </footer>
+
+    <footer class="site-footer">
     
+        <div class="footer-columns">
+          <div class="footer-col">
+            <ul>
+                <h4>About us</h4>
+              <li>This is a Proyect made for Web Design Introduction Class at the Icesi University. <br>
+            We are 3 students from the Interactive Media Design Program.
+        </li>
+            </ul>
+
+            <ul>
+                <h4>Pokédex</h4>
+              <li><a href="#">Search</a></li>
+              <li><a href="alejomum@gmail.com?Subject=Pokémon%20Data%20Base%20Issue%20Report">Report an Issue</a></li>
+            </ul>
+
+          <ul>
+            <h4>Contact us</h4>
+            <li>+57 316 351 6738</li>
+            <li><a href="alejomum@gmail.com?Subject=Pokémon%20Data%20Base%20Contact">E Mail</a></li>
+            <li><a href="https://www.icesi.edu.co/" target="_blank">Universidad Icesi</a></li>
+          </ul>
+
+          <h4><a href="https://www.instagram.com/alejmmtz_/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></h4>
+          <h4><a href="https://www.instagram.com/carlos_stiven_rodriguez/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></h4>
+          <h4><a href="https://www.instagram.com/jhon02_a/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></h4>
+
+        </ul>
+
+
+      </div>
+  </div>
+    
+        <div class="footer-bottom">
+          <p>© 2025 Pokémon. © 1995 - 2025 Nintendo / Creatures Inc / Game Freak inc. TM, ®Nintendo. </p>
+          <div class="legal-links">
+            <a href="user-terms.html">Terms of Use</a>
+          </div>
+        </div>
 </body>
 
 </html>
