@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" />
   <title>Pokémon Database</title>
-  <link rel="stylesheet" href="account-edit.css" />
+  <link rel="stylesheet" href="../Styles/account-edit.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
@@ -13,9 +13,6 @@
   >
 </head>
 <body>
-  <div class="header-container">
-    <h1 class="welcome-message">Edit Your Account Information</h1>
-  </div>
   <main class="container">
     <section class="left-column">
       <div class="user-info">
@@ -63,13 +60,18 @@
     </a>
   </section>
 
+  <footer class="emcabezadoin">
+    <p>© 2025 Pokémon. © 1995 - 2025 Nintendo / Creatures Inc / Game Freak inc. TM, ®Nintendo.</p>
+</footer>
+
+
   <div id="changepassword" class="modal">
     <div class="modal-content">
       <a href="#" class="close-btn">&times;</a>
       <h2 class="modal-title">Change Your Password</h2>
       <form class="modal-form">
         <label for="current-pass">Current Password</label>
-        <input type="password" id="current-pass" placeholder="Write Your Current Password">
+        <input type="password" id="current-pass">
         <label for="new-pass">New Password</label>
         <input type="password" id="new-pass">
         <label for="confirm-pass">Confirm New Password</label>

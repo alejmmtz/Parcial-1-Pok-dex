@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+    background-color: #e7dede;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background-color: #e7dede;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.header1 {
+    margin-right: 50px;
+}
+
+.nav i {
+    margin-right: 15px;
+    font-size: 35px;
+}
+
+nav a:hover {
+    color: #003A70;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.pokemon-info {
+    flex: 1;
+    color: #333;
+
+    i {
+        color: rgb(180, 12, 12);
+    }
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #555;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stats p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.types, .evolutions {
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.water {
+    background-color: #62B6E2;
+    color: white;
+}
+
+.rock {
+    background-color: #A79F4F;
+    color: white;
+}
+
+.electric {
+    background-color: #fffc50;
+    color: #1d1d1b;
+}
+
+.evolution-images {
+    display: flex;
+    gap: 60px;
+}
+
+.evolution-images img {
+    width: 80px;
+    height: 100px;
+}
+.front {
+    margin: 0;
+}
+.back {
+    margin-right: 35px;
+    margin-left: 0px;
+}
+.shiny {
+    margin: 0;
+}
+
+.pokemon-image img {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    left: 200px;
+    top: 60px;
+    width: 602px;
+}
+
+.Triangulo {
+    display: flex;
+    position: relative;
+    z-index: 0;
+    width: 2000px;
+    right: 370px;
+    top: 72px;
+}
+
+.site-footer {
+    background-color: #1d1d1b;
+    color: #fff;
+    padding: 50px 100px;
+    margin-top: 50px;
+  }
+
+  
+  .footer-columns {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  
+ .footer-col {
+    display: flex;
+    flex-direction: row;
+ }
+
+ .footer-col i{
+margin-right: 20px;
+font-size: 30px;
+text-decoration: none;
+color: whitesmoke;
+ }
+
+  .footer-col h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-right: 100px;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Parte inferior del footer */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 15px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .legal-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  
