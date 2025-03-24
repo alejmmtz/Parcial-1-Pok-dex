@@ -63,23 +63,6 @@ nav a:hover {
         color: rgb(180, 12, 12);
     }
 
-h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-h3 {
-    font-size: 24px;
-    color: #555;
-}
-
-p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 15px;
-}
-
 }
 
 .stats {
@@ -212,7 +195,7 @@ color: whitesmoke;
     text-decoration: underline;
   }
   
-  /* Parte inferior del footer */
+
   .footer-bottom {
     display: flex;
     justify-content: space-between;

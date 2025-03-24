@@ -153,7 +153,7 @@ nav a:hover {
     background-color: #2d468d;
   }
   
-  /* Columna Derecha */
+ 
   .right-column {
     flex: 1;
     background-color: #fff;
@@ -162,13 +162,17 @@ nav a:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   }
   
-  /* Título de Pokémons favoritos */
+  a {
+    text-decoration: none;
+    color: #1d1d1b;
+  }
+
   .fav-title {
     font-size: 1.3rem;
     margin-bottom: 15px;
   }
   
-  /* Contenedor de las cartas de Pokémon */
+
   .pokemon-cards {
     display: flex;
     gap: 20px;
@@ -176,7 +180,7 @@ nav a:hover {
     margin-bottom: 20px;
   }
   
-  /* Carta individual */
+
   .pokemon-card {
     width: 130px;
     background-color: #eee;
@@ -201,12 +205,15 @@ nav a:hover {
     opacity: 0.8;
   }
   
-  /* Colores de fondo */
+
   .purple {
     background-color: #f2e1ff;
   }
   .green {
     background-color: #d9f7d9;
+  }
+  .yellow {
+    background-color: #fffc50;
   }
   
   /* Botón 'More' */

@@ -351,7 +351,7 @@ color: whitesmoke;
     text-decoration: underline;
   }
   
-  /* Parte inferior del footer */
+ 
   .footer-bottom {
     display: flex;
     justify-content: space-between;
