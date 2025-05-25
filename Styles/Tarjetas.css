@@ -88,20 +88,94 @@ button {
     margin-right: 10px;
     border-radius: 20px;
 }
-
-.water {
-    background-color: #62B6E2;
+.normal {
+    background-color: #A8A878;
     color: white;
 }
 
-.rock {
-    background-color: #A79F4F;
+.fire {
+    background-color: #F08030;
+    color: white;
+}
+
+.water {
+    background-color: #6890F0;
+    color: white;
+}
+
+.grass {
+    background-color: #78C850;
     color: white;
 }
 
 .electric {
-    background-color: #fffc50;
-    color: #1d1d1b;
+    background-color: #F8D030;
+    color: black;
+}
+
+.ice {
+    background-color: #98D8D8;
+    color: white;
+}
+
+.fighting {
+    background-color: #C03028;
+    color: white;
+}
+
+.posion {
+    background-color: #A040A0;
+    color: white;
+}
+
+.ground {
+    background-color: #E0C068;
+    color: black;
+}
+
+.flying {
+    background-color: #A890F0;
+    color: black;
+}
+
+.psychic {
+    background-color: #F85888;
+    color: white;
+}
+
+.bug {
+    background-color: #A8B820;
+    color: white;
+}
+
+.rock {
+    background-color: #B8A038;
+    color: white;
+}
+
+.ghost {
+    background-color: #705898;
+    color: white;
+}
+
+.dark {
+    background-color: #705848;
+    color: white;
+}
+
+.dragon {
+    background-color: #7038F8;
+    color: white;
+}
+
+.steel {
+    background-color: #B8B8D0;
+    color: black;
+}
+
+.fairy {
+    background-color: #F0B6BC;
+    color: black;
 }
 
 .evolution-images {
@@ -110,8 +184,8 @@ button {
 }
 
 .evolution-images img {
-    width: 80px;
-    height: 100px;
+    width: 100px;
+    height: 120px;
 }
 .front {
     margin: 0;
@@ -219,3 +293,19 @@ color: whitesmoke;
     text-decoration: underline;
   }
   
+  .favorite-btn {
+    margin-left: 10px;
+    background-color: #e6d9db;
+    color: white;
+    border: none;
+    border-radius: 70px;
+    padding: 10px 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-btn:hover {
+    background-color: #eb8695;
+    transform: scale(1.05);
+}
+

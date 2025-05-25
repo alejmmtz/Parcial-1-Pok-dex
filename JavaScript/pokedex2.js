@@ -113,7 +113,7 @@ function mostrarPokemon(poke) {
         </div>
     `;
     listaPokemon.append(div);
-}
+}*/
 
 const buscar = document.querySelector("#btn-buscar")
 buscar.addEventListener("click", buscarPokemon)
@@ -126,7 +126,7 @@ function buscarPokemon(){
     alert("buscar"+buscado)
   
 
-}/*
+}
 
 
 

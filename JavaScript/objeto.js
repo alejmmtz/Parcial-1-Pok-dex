@@ -32,122 +32,108 @@ new pokemon("../Elementos/014.png", "Kakuna", 14, "bug", "../Elementos/Bicho.png
 new pokemon("../Elementos/015.png", "Beedrill", 15, "bug", "../Elementos/Bicho.png", "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.", "3' 03", "Poison Bee", "65.0 lbs", "Swarm", "../Elementos/015-frente.png", "../Elementos/015-espalda.png", "../Elementos/015-shiny.png"),
 ];
 
+const parametros = new URLSearchParams(window.location.search);
+const id = parseInt(parametros.get("numero"));
 
+if (id) {
+    const pokemon = pokemones.find(p => p.numero === id);
 
-
-
-function renderCharacter(pokemon) {
-    const card = document.createElement('div');
-    card.className = 'pokemon-card';
-    card.innerHTML = `
-    <div class="pokemon-card type-${pokemon.tipo}">
-            <img class="pokemon-image"
-              src="${pokemon.imagenURL}" 
-              alt="${pokemon.nombre}"
-            />
-          </div>
-          <h3>${pokemon.nombre}</h3>
-            <p>${String(pokemon.numero).padStart(3,'0')}</p>
-    `;
-    card.addEventListener("click", () => {
-        window.location.href = `Tarjetas.html?numero=${pokemon.numero}`;
-        });
-    return card;
-}
-
-function DisplayCharacters() {
-    const container = document.getElementById('pokemon-card');
-
-    pokemones.forEach(pokemon => {
-        const card = renderCharacter(pokemon);
-        container.appendChild(card);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', DisplayCharacters);
-
-function aleatorio(){
-  let Azar = Math.floor(Math.random() * pokemones.length);
-
-  document.getElementsByClassName("random-btn").innerHTML =
-  `${pokemones[Azar]}`;
-}
-
-
-
-
-
-/*function renderPokemon() {
-    const tbody = document.getElementById('pokemon-card');
-    tbody.innerHTML = '';
-    
-    pokemones.forEach(pokemon => {
-        const card = document.createElement('div');
-        card.innerHTML = `
-            <div class="pokemon">
-          <div class="pokemon-card type-${pokemon.tipo}">
-            <img class="pokemon-image"
-              src="${pokemon.imagenURL}" 
-              alt="${pokemon.nombre}"
-            />
-          </div>
-          <h3>${pokemon.nombre}</h3>
-            <p>${String(pokemon.numero).padStart(3,'0')}</p>
+    if (pokemon) {
+        const contenedor = document.querySelector(".pokemon-info");
+        contenedor.innerHTML = `
+        <div class="container">
+        <div class="pokemon-info">
+            <h1>${pokemon.nombre}<button class="favorite-btn" title="Add to Favorites">❤️</h1>
+            <h3>#${String(pokemon.numero).padStart(3, '0')}</h3>
+            <p>
+                ${pokemon.desc}
+            </p>
+            <div class="stats">
+                <p><strong style="font-weight: bolder;">Height:</strong> ${pokemon.height}</p>
+                <p><strong style="font-weight: bolder;">Category:</strong> ${pokemon.category}</p>
+                <p><strong style="font-weight: bolder;">Weight:</strong> ${pokemon.weight}</p>
+                <p><strong style="font-weight: bolder;">Ability:</strong> ${pokemon.ability}</p>
             </div>
-</div>
-    `;
-        tbody.appendChild(card);
-         card.addEventListener("click", () => {
-        window.location.href = `Tarjetas.html?numero=${pokemon.numero}`;
-        }); 
-        return card;
-    });
+            <div class="types">
+                <p><strong style="font-weight: 900;">Type:</strong></p>
+                <button class="${pokemon.tipo}">${pokemon.tipo}</button>
+            </div>
     
+            <div class="evolutions">
+                <p><strong style="font-weight: 900;">In-Game Sprites:</strong></p>
+                <div class="evolution-images">
+                    <div class="front">
+                        <img src="${pokemon.img1}" alt="Front">
+                    </div>
+                    <div class="back">
+                        <img src="${pokemon.img2}" alt="Back">
+                    </div>
+                    <div class="shiny">
+                        <img src="${pokemon.img3}" alt="Shiny">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pokemon-image">
+            <img src="${pokemon.imagenURL}" alt="${pokemon.nombre}">
+        </div>
+        <div class="Triangulo">
+            <img src="${pokemon.trianguloIMG}" alt="ejemplo">
+        </div>
+    </div>
+
+        `;
+    } else {
+        document.getElementById("characters-container").innerHTML = "<p>Pokemon no encontrado.</p>";
+    }
+} else {
+    document.querySelector(".pokemon-info").innerHTML = "<p>No se especificó numero de Pokemon</p>"
 }
-renderPokemon();*/
 
 
 
 
-
-
-
-
-
-
-
-/*(function() {
-  renderPokemon();
-})();
-
-function renderPokemon() {
-  const grid = document.getElementById('pokemon-card');
-  grid.innerHTML = '';
-
-  pokemones.forEach(p => {
-    const card = document.createElement('div');
-    card.className =`pokemon-card type-${p.tipo}`;
-
-
-    const img = document.createElement('img');
-    img.className = 'pokemon-image';
-    img.src = p.imagenURL;
-    img.alt = p.nombre;
-    card.appendChild(img);
-
-    const info = document.createElement('div');
-    info.className = '.pokemon-info';
-
-    const h3 = document.createElement('h3');
-    h3.className = 'pokemon-name';
-    h3.textContent = p.nombre;
-    info.appendChild(h3);
-
-    const num = document.createElement('p');
-    num.textContent = String(p.numero).padStart(3, '0');
-    info.appendChild(num);
-
-    card.appendChild(info);
-    grid.appendChild(card);
-  });
-}*/
+ /*<div class="container">
+        <div class="pokemon-info">
+            <h1>Pikachu <i class="fa fa-heart"></i></h1>
+            <h3>N.º 0025</h3>
+            <p>
+                When angry, this Pokémon releases the energy it stores inside its cheek pouches.
+            </p>
+            <div class="stats">
+                <p><strong style="font-weight: bolder;">Height:</strong> 0.4 m</p>
+                <p><strong style="font-weight: bolder;">Category:</strong> Mouse</p>
+                <p><strong style="font-weight: bolder;">Weight:</strong> 6,0 kg</p>
+                <p><strong style="font-weight: bolder;">Ability:</strong> Electric Static</p>
+            </div>
+            <div class="types">
+                <p><strong style="font-weight: 900;">Type:</strong></p>
+                <button class="electric">Electric</button>
+            </div>
+            <div class="types">
+                <p><strong style="font-weight: 900;">Weakness:</strong></p>
+                <button class="rock">Rock</button>
+            </div>
+    
+            <div class="evolutions">
+                <p><strong style="font-weight: 900;">In-Game Sprites:</strong></p>
+                <div class="evolution-images">
+                    <div class="front">
+                        <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/Ejemplo%20frente.png?raw=true" alt="Front">
+                    </div>
+                    <div class="back">
+                        <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/Ejemplo%20espalda.png?raw=true" alt="Back">
+                    </div>
+                    <div class="shiny">
+                        <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/Ejemplo%20Shiny.png?raw=true" alt="Shiny">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pokemon-image">
+            <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/Ejemplo%20pokemon.png?raw=true" alt="Raboot">
+        </div>
+        <div class="Triangulo">
+            <img src="https://raw.githubusercontent.com/alejmmtz/Parcial-1-Pok-dex/refs/heads/main/Elementos/Electrico.png" alt="ejemplo">
+        </div>
+    </div>*/
