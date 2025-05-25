@@ -19,11 +19,13 @@
     <div class="right">
       <h2>Welcome back</h2>
       <p class="subtitle">Login</p>
+      <p class="error"></p>
 
-      <form>
+
+      <form id="login-form">
         <label for="text">Username</label>
         <input
-          type="email"
+          type="Text"
           id="text"
           placeholder="Type Your Username"
           required
@@ -36,8 +38,8 @@
           placeholder="Password"
           required
         />
-
-        <button onclick="location.href='landing2.html'">Login</button>
+      
+        <button type="submit">Login</button>
 
       <p class="signup-text">
         You don't have an account? <br>
@@ -45,5 +47,8 @@
       </p>
     </div>
 </div>
+
+<script src="../JavaScript/login.js"></script>
+
 </body>
 </html>

@@ -44,13 +44,22 @@ body {
   font-size: 25px;
   font-weight: 400;
   color: #1d1d1b;
-  margin-bottom: 150px;
 }
+
+.error {
+  font-size: 18px;
+  font-weight: 400;
+  color: #003A70;
+  margin-bottom: 100px;
+}
+
 
 form {
   display: flex;
   flex-direction: column;
 }
+
+
 
 label {
   font-size: 15px;

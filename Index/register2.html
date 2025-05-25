@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" />
   <title>Pokémon Database</title>
   <link rel="stylesheet" href="../Styles/register2.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
   <header class="header">
     <div class="logo">
-        <a href="Landing2.html">
-            <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/International_Pok%C3%A9mon_logo.svg.png?raw=true"
-                alt="Pokémon Logo">
-        </a>
+      <a href="Landing2.html">
+        <img
+          src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/International_Pok%C3%A9mon_logo.svg.png?raw=true"
+          alt="Pokémon Logo">
+      </a>
     </div>
     <nav class="nav">
-        <a class="header1" href="Tarjetas.html">Pokédex</a>
-        <i class="fa fa-user-circle-o"></i>
-        <a href="account.html" class="login"> Alejandro </a>
+      <a class="header1" href="Tarjetas.html">Pokédex</a>
+      <i class="fa fa-user-circle-o"></i>
+      <a href="account.html" class="login" id="account"> </a>
     </nav>
-</header>
+  </header>
 
   <div class="header-container">
-    <h1 class="welcome-message">We are happy to have you here, <span>Alejandro</span></h1>
+    <h1 class="welcome-message">We are happy to have you here, <span id="welcome-name"></span></h1>
   </div>
 
   <main class="container">
     <section class="left-column">
       <div class="user-info">
-        <img 
-          src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true" 
-          alt="Avatar Pikachu" 
-          class="avatar"
-        >
+        <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true"
+          alt="Avatar Pikachu" class="avatar">
         <div class="text-info">
-          <h2 >Alejandro</h2>
-          <p>@alejmmtz</p>
+          <h2 id="name"></h2>
+          <p id="username"></p>
           <p>
             Thanks for your Registration, we will make sure that you will not be dissapointed.
           </p>
@@ -60,14 +62,15 @@
 
 
     <section class="right-column">
-</section>
+    </section>
   </main>
 
   <footer class="emcabezadoin">
     <p>© 2025 Pokémon. © 1995 - 2025 Nintendo / Creatures Inc / Game Freak inc. TM, ®Nintendo.</p>
-</footer>
+  </footer>
 
-
+<script src="../JavaScript/register2.js"></script>
 
 </body>
+
 </html>

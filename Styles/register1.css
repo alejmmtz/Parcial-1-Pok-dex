@@ -26,12 +26,12 @@ body {
 }
 
 .right {
-  flex: 1;            
+  flex: 1;
   background-color: #eeeeee;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  padding: 0 50px;        
+  justify-content: center;
+  padding: 0 50px;
 }
 
 .right h2 {
@@ -44,7 +44,13 @@ body {
   font-size: 25px;
   font-weight: 400;
   color: #1d1d1b;
-  margin-bottom: 50px;
+}
+
+.errors {
+  font-size: 18px;
+  font-weight: 400;
+  color: #003A70;
+  margin-bottom: 75px;
 }
 
 form {
@@ -77,10 +83,10 @@ button {
   cursor: pointer;
   font-size: 15px;
   font-weight: medium;
-  display: block;      
-  margin: 10px  auto;
-  margin-top: 25px;    
-  text-align: center;  
+  display: block;
+  margin: 10px auto;
+  margin-top: 25px;
+  text-align: center;
 }
 
 button:hover {
