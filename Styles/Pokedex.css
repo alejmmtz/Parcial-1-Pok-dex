@@ -299,13 +299,12 @@ body {
 }
 
 .pokemon-card {
-    background-color: greenyellow;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     width: 330px;
     height: 310px;
+    margin-top: 35px;
 }
 .pokemon-card.type-normal {
   background: linear-gradient(135deg, #4a4a34 0%, #A8A878 100%);
@@ -376,7 +375,7 @@ body {
     max-width: 17rem;
 }
 
-.pokemon p {
+.pokemon-card p {
   display: flex;
   gap: 1rem;
   font-size: 22px ;
@@ -387,9 +386,10 @@ body {
   text-align: center;
     padding: 1rem;
     margin-bottom: 1px;
+  z-index: 1;
 }
 
-.pokemon h3 {
+.pokemon-card h3 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -513,8 +513,7 @@ color: whitesmoke;
   .legal-links a:hover {
     text-decoration: underline;
   }
-
-.ocultar {
+.filtro {
   display: none;
 }
   

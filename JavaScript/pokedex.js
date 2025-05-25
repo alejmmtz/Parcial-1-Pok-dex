@@ -32,28 +32,42 @@ new pokemon("../Elementos/014.png", "Kakuna", 14, "bug", "../Elementos/Bicho.png
 new pokemon("../Elementos/015.png", "Beedrill", 15, "bug", "../Elementos/Bicho.png", "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.", "3' 03", "Poison Bee", "65.0 lbs", "Swarm", "../Elementos/015-frente.png", "../Elementos/015-espalda.png", "../Elementos/015-shiny.png"),
 ];
 
+document.addEventListener("input", e => {
+  
+  if (e.target.matches("#search-input")) {
+    document.querySelectorAll(".pokemon-card").forEach(pokemonCard => {
+      pokemonCard.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+        ? pokemonCard.classList.remove("filtro")
+        : pokemonCard.classList.add("filtro");
+    });
+  }
+});
 
 
-
+let search = document.querySelector("#search-input");
 
 function renderCharacter(pokemon) {
     const card = document.createElement('div');
     card.className = 'pokemon-card';
     card.innerHTML = `
-    <div class="pokemon-card type-${pokemon.tipo}">
+        <div class="pokemon">
+          <div class="pokemon-card type-${pokemon.tipo}">
             <img class="pokemon-image"
               src="${pokemon.imagenURL}" 
               alt="${pokemon.nombre}"
-            />
+            >
+            <h3>${pokemon.nombre}</h3>
           </div>
-          <h3>${pokemon.nombre}</h3>
-            <p>${String(pokemon.numero).padStart(3,'0')}</p>
+            </div>
+            
+</div>
     `;
     card.addEventListener("click", () => {
         window.location.href = `Tarjetas.html?numero=${pokemon.numero}`;
         });
     return card;
 }
+
 
 function DisplayCharacters() {
     const container = document.getElementById('pokemon-card');
@@ -65,89 +79,3 @@ function DisplayCharacters() {
 }
 
 document.addEventListener('DOMContentLoaded', DisplayCharacters);
-
-function aleatorio(){
-  let Azar = Math.floor(Math.random() * pokemones.length);
-
-  document.getElementsByClassName("random-btn").innerHTML =
-  `${pokemones[Azar]}`;
-}
-
-
-
-
-
-/*function renderPokemon() {
-    const tbody = document.getElementById('pokemon-card');
-    tbody.innerHTML = '';
-    
-    pokemones.forEach(pokemon => {
-        const card = document.createElement('div');
-        card.innerHTML = `
-            <div class="pokemon">
-          <div class="pokemon-card type-${pokemon.tipo}">
-            <img class="pokemon-image"
-              src="${pokemon.imagenURL}" 
-              alt="${pokemon.nombre}"
-            />
-          </div>
-          <h3>${pokemon.nombre}</h3>
-            <p>${String(pokemon.numero).padStart(3,'0')}</p>
-            </div>
-</div>
-    `;
-        tbody.appendChild(card);
-         card.addEventListener("click", () => {
-        window.location.href = `Tarjetas.html?numero=${pokemon.numero}`;
-        }); 
-        return card;
-    });
-    
-}
-renderPokemon();*/
-
-
-
-
-
-
-
-
-
-
-
-/*(function() {
-  renderPokemon();
-})();
-
-function renderPokemon() {
-  const grid = document.getElementById('pokemon-card');
-  grid.innerHTML = '';
-
-  pokemones.forEach(p => {
-    const card = document.createElement('div');
-    card.className =`pokemon-card type-${p.tipo}`;
-
-
-    const img = document.createElement('img');
-    img.className = 'pokemon-image';
-    img.src = p.imagenURL;
-    img.alt = p.nombre;
-    card.appendChild(img);
-
-    const info = document.createElement('div');
-    info.className = '.pokemon-info';
-
-    const h3 = document.createElement('h3');
-    h3.className = 'pokemon-name';
-    h3.textContent = p.nombre;
-    info.appendChild(h3);
-
-    const num = document.createElement('p');
-    num.textContent = String(p.numero).padStart(3, '0');
-    info.appendChild(num);
-
-    card.appendChild(info);
-    grid.appendChild(card);
-  });
-}*/

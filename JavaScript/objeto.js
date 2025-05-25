@@ -33,10 +33,10 @@ new pokemon("../Elementos/015.png", "Beedrill", 15, "bug", "../Elementos/Bicho.p
 ];
 
 const parametros = new URLSearchParams(window.location.search);
-const id = parseInt(parametros.get("numero"));
+const numero = parseInt(parametros.get("numero"));
 
-if (id) {
-    const pokemon = pokemones.find(p => p.numero === id);
+if (numero) {
+    const pokemon = pokemones.find(p => p.numero === numero);
 
     if (pokemon) {
         const contenedor = document.querySelector(".pokemon-info");
