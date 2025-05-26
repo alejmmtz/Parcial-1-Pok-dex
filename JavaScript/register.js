@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form         = document.querySelector('#register-form');
-    const errorsection = document.querySelector('.errors');
+const form         = document.querySelector('#register-form');
+const errorsection = document.querySelector('.errors');
   
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -17,11 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         errorsection.textContent = "The Passwords don't match";
         return;
       }
-  
-      sessionStorage.setItem('newEmail', email);
-      sessionStorage.setItem('newPass',  password);
+
 
       window.location.href = 'register1.html';
     });
-  });
   

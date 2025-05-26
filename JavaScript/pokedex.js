@@ -32,6 +32,17 @@ new pokemon("../Elementos/014.png", "Kakuna", 14, "bug", "../Elementos/Bicho.png
 new pokemon("../Elementos/015.png", "Beedrill", 15, "bug", "../Elementos/Bicho.png", "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.", "3' 03", "Poison Bee", "65.0 lbs", "Swarm", "../Elementos/015-frente.png", "../Elementos/015-espalda.png", "../Elementos/015-shiny.png"),
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+  const userJSON = sessionStorage.getItem('currentUser');
+  if (!userJSON) {
+    location.href = 'login.html';
+    return;
+  }
+  const user = JSON.parse(userJSON);
+  const navAccount = document.querySelector('#account');
+  if (navAccount) navAccount.textContent = '@' + user.username;
+});
+
 document.addEventListener("input", e => {
   
   if (e.target.matches("#search-input")) {

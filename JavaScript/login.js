@@ -1,21 +1,26 @@
-function user(username, email, password, name, picture, favoritepokemon) {
+function user(username, email, password, name, birthdate, favoritepokemon) {
     this.username = username;
     this.email = email;
     this.password = password;
     this.name = name;
-    this.picture = picture;
+    this.birthdate = birthdate;
     this.favoritepokemon = favoritepokemon;
 }
 
 const users = [
-    new user("alejmmtz", "alejomum@gmail.com", "RomanticoSalvaj3", "Alejandro", 
-        "https://cdn-images.dzcdn.net/images/cover/aedac72659474e460f6356bcc70afcdd/0x1900-000000-80-0-0.jpg", [1,2,3]),
+    new user("alejmmtz", "alejomum@gmail.com", "RomanticoSalvaj3", "Alejandro", "2007-04-16" , [1,2,3]),
     
-    new user("carlos01", "carlosgiraldo@gmail.com", "Carlos01", "Carlos", 
-        "https://cdn-images.dzcdn.net/images/cover/aedac72659474e460f6356bcc70afcdd/0x1900-000000-80-0-0.jpg", [4,5,6])
+    new user("carlos01", "carlosgiraldo@gmail.com", "Carlos01", "Carlos","2007-04-16" ,  [4,5,6]),
+
+    new user("100gecs", "100gecs@gmail.com", "123", "Laura","2007-04-16" ,  [4,5,6]),
+
+    new user("esteman", "estebodrioman@gmail.com", "54321", "Esteban","2007-04-16" ,  [4,5,6]),
+
+    new user("4mdaa", "elmeselm@gmail.com", "12345", "Marcos","2007-04-16" , [4,5,6]),
+
+    new user("saikorito", "saikoroo@gmail.com", "123", "David","2007-04-16" ,  [1,3,8])
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#login-form');
     const errorlogin = document.querySelector('.error');
 
@@ -37,4 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
             errorlogin.textContent = 'Check the Username or Password';
         }
     });
-});
+

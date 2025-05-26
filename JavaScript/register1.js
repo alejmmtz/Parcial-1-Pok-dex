@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#register1-form');
     const errorsection = document.querySelector('.errors');
     const usernameform = document.querySelector('#username');
@@ -44,5 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
       window.location.href = 'register2.html';
     });
-  });
   

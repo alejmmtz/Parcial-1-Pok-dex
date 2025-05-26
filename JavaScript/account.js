@@ -1,53 +1,44 @@
-// account.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1) Recuperar usuario “logeado”
-    const currentUserJSON = sessionStorage.getItem('currentUser');
-    if (!currentUserJSON) {
-      // si no hay usuario, volvemos al login
+    const userJSON = sessionStorage.getItem('currentUser');
+    if (!userJSON) {
       window.location.href = 'login.html';
       return;
     }
-    const user = JSON.parse(currentUserJSON);
+    const user = JSON.parse(userJSON);
   
-    // 2) Inyectar nombre y handle
-    document.querySelector('.greeting .highlight')
-            .textContent = user.name;
-    document.querySelector('.user-name')
-            .textContent = user.name;
-    document.querySelector('.user-handle')
-            .textContent = '@' + user.username;
+    const navAccount   = document.querySelector('#account');
+    const welcomeName  = document.querySelector('#welcome-name');
+    const userNameElem = document.querySelector('.user-name');
+    const userHandle   = document.querySelector('.user-handle');
+    const userBirth = document.querySelector('.user-birth')
   
-    // 3) Fecha de creación: si guardaste newbirthdate como fecha de cumpleaños,
-    //    podrías usarla, pero aquí ponemos la fecha actual:
-    const fecha = new Date();
-    const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.querySelector('.account-date')
-            .textContent = `Account created on ${fecha.toLocaleDateString('en-US', opciones)}`;
+    if (navAccount)  navAccount.textContent   = '@' + user.username;
+    if (welcomeName) welcomeName.textContent = user.name;
+    if (userNameElem) userNameElem.textContent = user.name;
+    if (userHandle)   userHandle.textContent   = '@' + user.username;
+    if (userBirth)   userBirth.textContent   = user.birthdate;
+
+    const favContainer = document.querySelector('#favorites-container');
   
-    // 4) Renderizar favoritos
-    const favContainer = document.querySelector('.pokemon-cards');
-    favContainer.innerHTML = ''; // limpiar el HTML hardcodeado
+    if (Array.isArray(user.favoritepokemon)) {
+      user.favoritepokemon.forEach(id => {
+        const p = pokemones.find(x => x.numero === id);
+        if (!p) return;
   
-    // user.favoritepokemon debe ser un array de números (ids)
-    user.favoritepokemon.forEach(id => {
-      // buscar en pokemones (definido en pokedex.js)
-      const pok = pokemones.find(p => p.numero === id);
-      if (!pok) return;
-  
-      // crear la card
-      const card = document.createElement('div');
-      card.className = `pokemon-card ${pok.tipo}`; 
-      card.innerHTML = `
-        <img src="${pok.imagenURL}" alt="${pok.nombre}">
-        <p class="pokemon-name">${pok.nombre}</p>
-        <p class="pokemon-id">${String(pok.numero).padStart(4, '0')}</p>
-      `;
-      // clic lleva al detalle
-      card.addEventListener('click', () => {
-        window.location.href = `Tarjetas.html?numero=${pok.numero}`;
+        const card = document.createElement('div');
+        card.className = `pokemon-card type-${p.tipo}`;
+        card.innerHTML = `
+          <img
+            src="${p.imagenURL}"
+          />
+          <p class="pokemon-name">${p.nombre}</p>
+          <p class="pokemon-id">${String(p.numero).padStart(3, '0')}</p>
+        `;
+        card.addEventListener('click', () => {
+          window.location.href = `Tarjetas.html?numero=${p.numero}`;
+        });
+        favContainer.appendChild(card);
       });
-      favContainer.appendChild(card);
-    });
+    }
   });
   

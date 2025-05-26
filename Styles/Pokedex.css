@@ -54,6 +54,7 @@ body {
     font-size: 25px;
     padding-top: 40px;
     padding-left: 100px;
+    margin-bottom: -50px;
 }
 
 .subtitulo{
@@ -180,10 +181,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
-    padding: 0 2rem;
-    max-width: 1300px;
-    margin: 0 auto;
-    margin-top: 75px;
+    padding: 15px 100px;
+    margin-top: -100px;
 }
 
 :root {
@@ -299,12 +298,12 @@ body {
 
 .pokemon-card {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 330px;
-    height: 310px;
-    margin-top: 35px;
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
 }
+
 .pokemon-card.type-normal {
   background: linear-gradient(135deg, #4a4a34 0%, #A8A878 100%);
 }
@@ -376,16 +375,13 @@ body {
 
 .pokemon-card p {
   display: flex;
-  gap: 1rem;
   font-size: 22px ;
   font-weight: bold;
   flex-direction: column;
-  padding-inline: 1rem;
   align-items: center;
   text-align: center;
-    padding: 1rem;
-    margin-bottom: 1px;
-  z-index: 1;
+  padding: 50px;
+  margin-bottom: 15px;
 }
 
 .pokemon-card h3 {
