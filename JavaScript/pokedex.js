@@ -69,6 +69,17 @@ function renderCharacter(pokemon) {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const randomBtn = document.querySelector('#random-btn');
+
+  randomBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * pokemones.length);
+    const randomPokemon = pokemones[randomIndex];
+    window.location.href = `Tarjetas.html?numero=${randomPokemon.numero}`;
+  });
+});
+
+
 function DisplayCharacters() {
     const container = document.getElementById('pokemon-card');
 

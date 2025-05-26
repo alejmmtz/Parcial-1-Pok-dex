@@ -181,13 +181,12 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
     padding: 0 2rem;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
     margin-top: 75px;
 }
 
 :root {
-
     --type-normal: #A8A878;
     --type-fire: #F08030;
     --type-water: #6890F0;
