@@ -16,11 +16,8 @@
   <main class="container">
     <section class="left-column">
       <div class="user-info">
-        <img 
-          src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true" 
-          alt="Avatar Pikachu" 
-          class="avatar"
-        >
+        <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true"
+          alt="Avatar Pikachu" class="avatar">
         <div class="text-info">
           <h2>Alejandro</h2>
           <p>@alejmmtz</p>
@@ -30,24 +27,14 @@
       <div class="form-group">
         <label for="user-email">Current User Email</label>
         <div class="input-change-group">
-          <input 
-            type="email" 
-            id="user-email" 
-            class="input-text" 
-            value="alejomum@gmail.com"
-          />
+          <input type="email" id="user-email" class="input-text" value="alejomum@gmail.com" />
           <a href="#changeemail" class="change-btn">Change</a>
         </div>
       </div>
       <div class="form-group">
         <label for="password">Change Your Password</label>
         <div class="input-change-group">
-          <input 
-            type="password" 
-            id="password" 
-            class="input-text" 
-            placeholder="********"
-          />
+          <input type="password" id="password" class="input-text" placeholder="********" />
           <a href="#changepassword" class="change-btn">Change</a>
         </div>
       </div>
@@ -62,7 +49,7 @@
 
   <footer class="emcabezadoin">
     <p>© 2025 Pokémon. © 1995 - 2025 Nintendo / Creatures Inc / Game Freak inc. TM, ®Nintendo.</p>
-</footer>
+  </footer>
 
 
   <div id="changepassword" class="modal">
@@ -85,5 +72,13 @@
     <div class="modal-content">
       <a href="#" class="close-btn">&times;</a>
       <h2 class="modal-title">Your E-Mail has been changed.</h2>
+      <form class="modal-form" id="formEmail">
+        <label for="nuevoEmail">New Email</label>
+        <input type="email" id="nuevoEmail" required>
+        <button type="submit" class="ok-btn">Save</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
