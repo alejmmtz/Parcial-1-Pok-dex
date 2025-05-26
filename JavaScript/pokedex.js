@@ -58,7 +58,7 @@ function renderCharacter(pokemon) {
             >
             <h3>${pokemon.nombre}</h3>
           </div>
-            </div>
+            </div> 
             
 </div>
     `;
@@ -71,7 +71,6 @@ function renderCharacter(pokemon) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const randomBtn = document.querySelector('#random-btn');
-
   randomBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * pokemones.length);
     const randomPokemon = pokemones[randomIndex];
