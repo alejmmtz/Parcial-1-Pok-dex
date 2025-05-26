@@ -12,11 +12,11 @@ const users = [
     
     new user("carlos01", "carlosgiraldo@gmail.com", "Carlos01", "Carlos","2007-04-16" ,  [4,5,6]),
 
-    new user("100gecs", "100gecs@gmail.com", "123", "Laura","2007-04-16" ,  [4,5,6]),
+    new user("100gecs", "100gecs@gmail.com", "123", "Laura","2007-04-16" ,  [7,8,9,1]),
 
-    new user("esteman", "estebodrioman@gmail.com", "54321", "Esteban","2007-04-16" ,  [4,5,6]),
+    new user("esteman", "estebodrioman@gmail.com", "54321", "Esteban","2007-04-16" ,  [10,11,12]),
 
-    new user("4mdaa", "elmeselm@gmail.com", "12345", "Marcos","2007-04-16" , [4,5,6]),
+    new user("4mdaa", "elmeselm@gmail.com", "12345", "Marcos","2007-04-16" , [13,14,15,3]),
 
     new user("saikorito", "saikoroo@gmail.com", "123", "David","2007-04-16" ,  [1,3,8])
 ];

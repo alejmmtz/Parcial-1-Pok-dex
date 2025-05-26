@@ -169,68 +169,110 @@ nav a:hover {
 
   .fav-title {
     font-size: 1.3rem;
-    margin-bottom: 15px;
+    margin: 10px;
+    margin-bottom: 25px;
   }
   
 
   .pokemon-cards {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
-  
 
   .pokemon-card {
-    width: 130px;
-    background-color: #eee;
-    border-radius: 8px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    overflow: hidden;
     text-align: center;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 10px;
+    margin: 2.5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+  
+  .pokemon-card:hover {
+    transform: translateY(-5px);
+  }
+  
   .pokemon-card img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
   }
+  
   .pokemon-name {
     font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 4px;
+    font-size: 15px;
+    margin: 0;
   }
+  
   .pokemon-id {
-    font-size: 0.85rem;
-    opacity: 0.8;
+    font-size: 15px;
+    margin: 4px 0 0;
   }
-  
+   
 
-  .purple {
-    background-color: #f2e1ff;
+  .type-normal {
+    background: linear-gradient(135deg, #4a4a34 0%, #A8A878 100%);
   }
-  .green {
-    background-color: #d9f7d9;
+  .type-fire {
+    background: linear-gradient(135deg, #F08030 0%, #F8D030 100%);
   }
-  .yellow {
-    background-color: #fffc50;
+  .type-water {
+    background: linear-gradient(135deg, #344a80 0%, #98D8D8 100%);
   }
+  .type-grass {
+    background: linear-gradient(135deg, #548f36 0%, #A8E060 100%);
+  }
+  .type-electric {
+    background: linear-gradient(135deg, #ffbf00 0%, #F8D030 100%);
+  }
+  .type-ice {
+    background: linear-gradient(135deg, #3fbcbc 0%, #98D8D8 100%);
+  }
+  .type-fighting {
+    background: linear-gradient(135deg, #e76305 0%, #C03028 100%);
+  }
+  .type-poison {
+    background: linear-gradient(135deg, #53024c 0%, #A040A0 100%);
+  }
+  .type-ground {
+    background: linear-gradient(135deg, #838a04 0%, #d4e454 100%);
+  }
+  .type-flying {
+    background: linear-gradient(135deg, #b2abc6 0%, #9479e5 100%);
+  }
+  .type-psychic {
+    background: linear-gradient(135deg, #e4088c  0%, #e66189 100%);
+  }
+  .type-bug {
+    background: linear-gradient(135deg, #69d808 0%, #a4b509 100%);
+  }
+  .type-rock {
+    background: linear-gradient(135deg, #4d4b02  0%, #B8A038 100%);
+  }
+  .type-ghost {
+    background: linear-gradient(135deg, #b562f4 0%, #705898 100%);
+  }
+  .type-dark {
+    background: linear-gradient(135deg, #281d35 0%, #564134 100%);
+  }
+  .type-dragon {
+    background: linear-gradient(135deg, #392f6e 0%, #7038F8 100%);
+  }
+.type-steel {
+    background: linear-gradient(135deg, #666769 0%, #b8b8df 100%);
+  }
+.type-fairy {
+    background: linear-gradient(135deg, #da527f 0%, #F0B6BC 100%);
+  }
+
   
-  /* Botón 'More' */
-  .more-btn {
-    background-color: #1f356b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  .more-btn:hover {
-    background-color: #2a447e;
-  }
-  
+ 
   
   .site-footer {
     background-color: #1d1d1b;
@@ -285,7 +327,6 @@ color: whitesmoke;
     text-decoration: underline;
   }
   
-  /* Parte inferior del footer */
   .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -308,4 +349,3 @@ color: whitesmoke;
   .legal-links a:hover {
     text-decoration: underline;
   }
-
