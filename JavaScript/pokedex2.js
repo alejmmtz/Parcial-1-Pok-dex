@@ -2,171 +2,127 @@ const listaPokemon = document.querySelector("#pokemon-card")
 
 const arregloPoke = []
 
+//Buscador
+document.addEventListener('keyup', e => {
+  if (e.target.matches("#search-input")) {
+    const valor = e.target.value.toLowerCase();
+    document.querySelectorAll(".pokemon").forEach(pokes => {
+      const nombre = pokes.querySelector("h3")?.textContent.toLowerCase() || "";
+      if (nombre.includes(valor)) {
+        pokes.classList.remove("filtro");
+      } else {
+        pokes.classList.add("filtro");
+      }
+    });
+  }
+});
+
+//Filtrador
+document.querySelector('#type-select').addEventListener('change', (e) => {
+  const tipoSeleccionado = e.target.value.toLowerCase();
+
+  document.querySelectorAll('.pokemon').forEach(pokes => {
+    const tipos = Array.from(pokes.querySelectorAll('.tipo')).map(t => t.textContent.toLowerCase());
+
+    if (tipoSeleccionado === "" || tipos.includes(tipoSeleccionado)) {
+      pokes.classList.remove('filtro'); 
+    } else {
+      pokes.classList.add('filtro');
+    }
+  });
+});
+
+
 async function obtenerPokemon() {
   try {
     const respuesta = await fetch('https://pokeapi.co/api/v2/pokemon/');
     const datos = await respuesta.json();
-    //console.log(datos);
   } catch (error) {
     console.error(error);
   }
 }
 
-obtenerPokemon()
-console.log(datos)
+document.addEventListener('DOMContentLoaded', () => {
+  const userJSON = sessionStorage.getItem('currentUser');
+  if (!userJSON) {
+    location.href = 'login.html';
+    return;
+  }
+  const user = JSON.parse(userJSON);
+  const navAccount = document.querySelector('#account');
+  if (navAccount) navAccount.textContent = '@' + user.username;
+});
 
-/*for(let i = 1; i<=15; i++){
-  fetch("https://pokeapi.co/api/v2/pokemon/"+i)
-  .then(response => response.json())
-  .then(data => {
-    mostrarPokemon(data);            
-    arregloPoke.push(data);
-    })
-  //.then(error => console.log(error))
+
+obtenerPokemon()
+
+
+async function cargarPokemones() {
+  const espera = [];
+  for (let i = 1; i <= 100; i++) {
+    espera.push(fetch(`https://pokeapi.co/api/v2/pokemon/${i}`).then(res => res.json()));
+  }
+
+  const resultados = await Promise.all(espera);
+  resultados.sort((a, b) => a.id - b.id); 
+
+  resultados.forEach(pokemon => {
+    mostrarPokemon(pokemon);
+    arregloPoke.push(pokemon);
+  });
 }
-if(arregloPoke.length === 15){
-      console.log(arregloPoke)
-    }*/
+
+cargarPokemones();
+
+
+//Random
+document.addEventListener('DOMContentLoaded', () => {
+  const randomBtn = document.querySelector('#random-btn');
+
+  randomBtn.addEventListener('click', () => {
+    if (arregloPoke.length === 0) {
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * arregloPoke.length);
+    const random = arregloPoke[randomIndex];
+    window.location.href = `Tarjetas.html?numero=${random.id}`;
+  });
+});
+
+
+if(arregloPoke.length === 100){
+    console.log(arregloPoke)
+    };
 
 
 function mostrarPokemon(data){
-   let tipos = data.types.map((type)=>`<p class="${type.type.name} tipo">${type.type.name}</p>`);
-    tipos = tipos.join();
-
-
-    const div = document.createElement("div");
-    div.classList.add("pokemon");
-    const primerTipo = data.types[0].type.name;
-    div.innerHTML = `
-    <div class="pokemon">
-          <div class="pokemon-card type-${primerTipo}">
-            <img class="pokemon-image"
-              src="${data.sprites.other["official-artwork"].front_default}" 
-              alt="${data.name}"
-            >
-          </div>
-          <h3>${data.name}</h3>
-            <p>${data.id}</p>
-            </div>
-            <div class="pokemon-tipos">
-            ${tipos}
-        </div>
-    `;
-    listaPokemon.append(div);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*const listaPokemon = document.querySelector("#pokemon-card")
-let URL = "https://pokeapi.co/api/v2/pokemon/";
-
-const promesas = [];
-
-for (let i = 1; i <= 15; i++) {
-    promesas.push(fetch(URL + i).then(response => response.json()));
-}
-
-Promise.all(promesas).then(pokemones => {
-    pokemones.sort((a, b) => a.id - b.id);
-    pokemones.forEach(poke => mostrarPokemon(poke));
-});
-
-function mostrarPokemon(poke) {
-
-
-    //map genera un array de lo que uno le diga//
-    let tipos = poke.types.map((type)=>`<p class="${type.type.name} tipo">${type.type.name}</p>`);
+  let tipos = data.types.map((type)=>`<p class="${type.type.name} tipo">${type.type.name}</p>`);
     tipos = tipos.join('');
 
 
-    const div = document.createElement("div");
-    div.classList.add("pokemon");
-    const primerTipo = poke.types[0].type.name;
-    div.innerHTML = `
-    <div class="pokemon">
-          <div class="pokemon-card type-${primerTipo}">
-            <img class="pokemon-image"
-              src="${poke.sprites.other["official-artwork"].front_default}" 
-              alt="${poke.name}"
-            >
-          </div>
-          <h3>${poke.name}</h3>
-            <p>${poke.id}</p>
-            </div>
-            <div class="pokemon-tipos">
-            ${tipos}
-        </div>
-    `;
-    listaPokemon.append(div);
-}*/
+  const div = document.createElement("div");
+div.classList.add("pokemon");
 
-const buscar = document.querySelector("#btn-buscar")
-buscar.addEventListener("click", buscarPokemon)
+const primerTipo = data.types[0].type.name;
 
-function buscarPokemon(){
-  let buscado = document.querySelector("#search-input").value
-  //const found = pokemones
-  console.log(pokemones)
+div.innerHTML = `
+  <div class="pokemon-card type-${primerTipo}">
+    <img class="pokemon-image"
+      src="${data.sprites.other["official-artwork"].front_default}" 
+      alt="${data.name}"
+    >
+  </div>
+  <h3>${data.name}</h3>
+  <p>${data.id}</p>
+  <div class="pokemon-tipos">
+    ${tipos}
+  </div>
+`;
 
-    alert("buscar"+buscado)
-  
+div.addEventListener('click', () => {
+  window.location.href = `Tarjetas.html?numero=${data.id}`;
+});
 
+listaPokemon.append(div);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*document.addEventListener("keyup", e => {
-  if(e.target.matches("#search-input")){
-    document.querySelectorAll(".pokemon").forEach(pokemon => {
-      (pokemon.querySelector("h3").textContent + pokemon.querySelector("p").textContent)
-      .toLowerCase()
-      .includes(e.target.value.toLowerCase())
-      ? pokemon.classList.remove("hidden")
-      : pokemon.classList.add("hidden");
-    })
-  }
-})*/
-
-
-
-/*<div class="pokemon">
-          <div class="pokemon-card green">
-            <img 
-              src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/001.png?raw=true" 
-              alt="Bulbasaur"
-            >
-          </div>
-          <h3>Bulbasaur</h3>
-          <p>001</p>
-        </div>*/
