@@ -20,14 +20,14 @@ fairy: "../Elementos/Hada.png",
 
 };
 document.addEventListener('DOMContentLoaded', () => {
-  const userJSON = sessionStorage.getItem('currentUser');
-  if (!userJSON) {
-    location.href = 'login.html';
-    return;
-  }
-  const user = JSON.parse(userJSON);
-  const navAccount = document.querySelector('#account');
-  if (navAccount) navAccount.textContent = '@' + user.username;
+const userJSON = sessionStorage.getItem('currentUser');
+if (!userJSON) {
+location.href = 'login.html';
+return;
+};
+const user = JSON.parse(userJSON);
+const navAccount = document.querySelector('#account');
+if (navAccount) navAccount.textContent = '@' + user.username;
 });
 
 async function obtenerDatosBasicosPokemon(id) {
@@ -57,7 +57,7 @@ const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
 const datos = await respuesta.json();
 
 const descripcionEnIngles = datos.flavor_text_entries.find(
-    (f) => f.language.name === "en"
+(f) => f.language.name === "en"
 );
 let descripcion; 
 
