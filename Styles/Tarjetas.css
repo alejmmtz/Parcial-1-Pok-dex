@@ -221,33 +221,34 @@ button {
     color: #fff;
     padding: 50px 100px;
     margin-top: 50px;
-}
+  }
 
-.footer-columns {
+  
+  .footer-columns {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
-}
-
-.footer-col {
+  }
+  
+ .footer-col {
     display: flex;
     flex-direction: row;
-}
+ }
 
-.footer-col i{
+ .footer-col i{
 margin-right: 20px;
 font-size: 30px;
 text-decoration: none;
 color: whitesmoke;
-}
+ }
 
-.footer-col h4 {
+  .footer-col h4 {
     margin-bottom: 10px;
     font-size: 1rem;
     font-weight: bold;
-}
-
-.footer-col ul {
+  }
+  
+  .footer-col ul {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
@@ -307,3 +308,4 @@ color: whitesmoke;
     background-color: #eb8695;
     transform: scale(1.05);
 }
+

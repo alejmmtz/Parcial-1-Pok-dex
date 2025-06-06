@@ -3,6 +3,7 @@ const listaPokemon = document.querySelector("#pokemon-card")
 const arregloPoke = []
 
 
+
 async function obtenerPokemon() {
   try {
     const respuesta = await fetch('https://pokeapi.co/api/v2/pokemon/');
@@ -43,6 +44,7 @@ async function cargarPokemones() {
 }
 
 cargarPokemones();
+
 
 
 if(arregloPoke.length === 100){
