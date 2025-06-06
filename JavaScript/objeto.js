@@ -174,3 +174,5 @@ console.error("Error al cargar los datos del Pokémon:", error);
 contenedorInfo.innerHTML = "<p>Lo sentimos, ocurrió un error al cargar los datos del Pokémon.</p>";
 }
 });
+
+//Mensaje de prueba//
