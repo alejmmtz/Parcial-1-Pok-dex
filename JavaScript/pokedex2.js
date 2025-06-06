@@ -2,6 +2,35 @@ const listaPokemon = document.querySelector("#pokemon-card")
 
 const arregloPoke = []
 
+//Buscador
+document.addEventListener('keyup', e => {
+  if (e.target.matches("#search-input")) {
+    const valor = e.target.value.toLowerCase();
+    document.querySelectorAll(".pokemon").forEach(pokes => {
+      const nombre = pokes.querySelector("h3")?.textContent.toLowerCase() || "";
+      if (nombre.includes(valor)) {
+        pokes.classList.remove("filtro");
+      } else {
+        pokes.classList.add("filtro");
+      }
+    });
+  }
+});
+
+//Filtrador
+document.querySelector('#type-select').addEventListener('change', (e) => {
+  const tipoSeleccionado = e.target.value.toLowerCase();
+
+  document.querySelectorAll('.pokemon').forEach(pokes => {
+    const tipos = Array.from(pokes.querySelectorAll('.tipo')).map(t => t.textContent.toLowerCase());
+
+    if (tipoSeleccionado === "" || tipos.includes(tipoSeleccionado)) {
+      pokes.classList.remove('filtro'); 
+    } else {
+      pokes.classList.add('filtro');
+    }
+  });
+});
 
 
 async function obtenerPokemon() {
@@ -45,6 +74,21 @@ async function cargarPokemones() {
 
 cargarPokemones();
 
+
+//Random
+document.addEventListener('DOMContentLoaded', () => {
+  const randomBtn = document.querySelector('#random-btn');
+
+  randomBtn.addEventListener('click', () => {
+    if (arregloPoke.length === 0) {
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * arregloPoke.length);
+    const random = arregloPoke[randomIndex];
+    window.location.href = `Tarjetas.html?numero=${random.id}`;
+  });
+});
 
 
 if(arregloPoke.length === 100){
