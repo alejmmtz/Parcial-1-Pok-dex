@@ -74,7 +74,7 @@ function renderCharacter(pokemon) {
 </div>
     `;
   card.addEventListener("click", () => {
-    window.location.href = `Tarjetas.html?numero=${pokemon.numero}`;
+    window.location.href = `tarjeta.html?numero=${pokemon.numero}`;
   });
   return card;
 }
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   randomBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * pokemones.length);
     const randomPokemon = pokemones[randomIndex];
-    window.location.href = `Tarjetas.html?numero=${randomPokemon.numero}`;
+    window.location.href = `tarjeta.html?numero=${randomPokemon.numero}`;
   });
 });
 

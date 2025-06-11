@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const randomIndex = Math.floor(Math.random() * arregloPoke.length);
     const random = arregloPoke[randomIndex];
-    window.location.href = `Tarjetas.html?numero=${random.id}`;
+    window.location.href = `tarjeta.html?numero=${random.id}`;
   });
 });
 
@@ -121,7 +121,7 @@ function mostrarPokemon(data) {
 `;
 
   div.addEventListener('click', () => {
-    window.location.href = `Tarjetas.html?numero=${data.id}`;
+    window.location.href = `tarjeta.html?numero=${data.id}`;
   });
 
   listaPokemon.append(div);

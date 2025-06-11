@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="pokemon-id">${String(p.numero).padStart(3, '0')}</p>
         `;
       card.addEventListener('click', () => {
-        window.location.href = `Tarjetas.html?numero=${p.numero}`;
+        window.location.href = `tarjeta.html?numero=${p.numero}`;
       });
       favContainer.appendChild(card);
     });
