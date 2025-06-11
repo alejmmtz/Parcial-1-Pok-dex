@@ -26,12 +26,12 @@ body {
 }
 
 .right {
-  flex: 1;            
+  flex: 1;
   background-color: #eeeeee;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  padding: 0 50px;        
+  justify-content: center;
+  padding: 0 50px;
 }
 
 .right h2 {
@@ -85,14 +85,14 @@ button {
   cursor: pointer;
   font-size: 15px;
   font-weight: medium;
-  display: block;      
-  margin: 10px  auto;
-  margin-top: 25px;    
-  text-align: center;  
+  display: block;
+  margin: 10px auto;
+  margin-top: 25px;
+  text-align: center;
 }
 
 button:hover {
-box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+  box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
 }
 
 .signup-text {

@@ -25,7 +25,7 @@ document.querySelector('#type-select').addEventListener('change', (e) => {
     const tipos = Array.from(pokes.querySelectorAll('.tipo')).map(t => t.textContent.toLowerCase());
 
     if (tipoSeleccionado === "" || tipos.includes(tipoSeleccionado)) {
-      pokes.classList.remove('filtro'); 
+      pokes.classList.remove('filtro');
     } else {
       pokes.classList.add('filtro');
     }
@@ -64,7 +64,7 @@ async function cargarPokemones() {
   }
 
   const resultados = await Promise.all(espera);
-  resultados.sort((a, b) => a.id - b.id); 
+  resultados.sort((a, b) => a.id - b.id);
 
   resultados.forEach(pokemon => {
     mostrarPokemon(pokemon);
@@ -91,22 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-if(arregloPoke.length === 100){
-    console.log(arregloPoke)
-    };
+if (arregloPoke.length === 100) {
+  console.log(arregloPoke)
+};
 
 
-function mostrarPokemon(data){
-  let tipos = data.types.map((type)=>`<p class="${type.type.name} tipo">${type.type.name}</p>`);
-    tipos = tipos.join('');
+function mostrarPokemon(data) {
+  let tipos = data.types.map((type) => `<p class="${type.type.name} tipo">${type.type.name}</p>`);
+  tipos = tipos.join('');
 
 
   const div = document.createElement("div");
-div.classList.add("pokemon");
+  div.classList.add("pokemon");
 
-const primerTipo = data.types[0].type.name;
+  const primerTipo = data.types[0].type.name;
 
-div.innerHTML = `
+  div.innerHTML = `
   <div class="pokemon-card type-${primerTipo}">
     <img class="pokemon-image"
       src="${data.sprites.other["official-artwork"].front_default}" 
@@ -120,9 +120,9 @@ div.innerHTML = `
   </div>
 `;
 
-div.addEventListener('click', () => {
-  window.location.href = `Tarjetas.html?numero=${data.id}`;
-});
+  div.addEventListener('click', () => {
+    window.location.href = `Tarjetas.html?numero=${data.id}`;
+  });
 
-listaPokemon.append(div);
+  listaPokemon.append(div);
 }

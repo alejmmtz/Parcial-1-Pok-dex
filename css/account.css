@@ -1,351 +1,371 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
-    background-color: #e7dede;
-    color: #1d1d1b;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif, "DM Sans", sans-serif;
+  background-color: #e7dede;
+  color: #1d1d1b;
 }
-  
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 100px;
-    background-color: #e7dede;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  background-color: #e7dede;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .logo img {
-    height: 60px;
+  height: 60px;
 }
 
 .nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    margin-left: 0px;
-    display: flex;
-    align-items: center;
-    font-size: 17px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
 }
 
 .header1 {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .nav i {
-    margin-right: 15px;
-    font-size: 35px;
+  margin-right: 15px;
+  font-size: 35px;
 }
 
 nav a:hover {
-    color: #003A70;
+  color: #003A70;
 }
-  
+
 
 .container {
-    width: 90%;
-    max-width: 1300px;
-    margin: 40px auto;
-  }
-  
-  .greeting {
-    font-size: 40px;
-    margin-bottom: 40px;
-    font-weight: 400;
-  }
-  .highlight {
-    font-weight: 700;
-  }
-  
-  .main-content {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; 
-  }
-  
-  .left-column {
-    flex: 0 0 40%;
-    min-width: 300px;
-    position: relative;
-  }
-  
+  width: 90%;
+  max-width: 1300px;
+  margin: 40px auto;
+}
 
-  .bg-image {
-    width: 100%;
-    height: 250px;
-    background: url("https://raw.githubusercontent.com/alejmmtz/Parcial-1-Pok-dex/main/Elementos/985-20231202231601-af41d69a-5725-4eb8-bfe0-abbff65da011.jpg") 
-                no-repeat center/cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
-  }
+.greeting {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
 
-  .profile-card {
-    background-color: #1f356b;
-    color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  }
-  
+.highlight {
+  font-weight: 700;
+}
 
-  .user-name {
-    font-size: 30px;
-    margin-top: -10px;
-    margin-bottom: -10px;
-  }
-  .user-handle {
-    font-size: 15px;
-    opacity: 0.9;
-    margin-bottom: -10px;
-  }
-  .account-date {
-    font-size: 15px;
-    margin-bottom: 10px;
-    opacity: 0.9;
-  }
-  
-  .edit-btn,
-  .logout-btn {
-    display: block;
-    width: 80%;
-    margin: 5px auto;
-    padding: 10px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-  .edit,
-  .logout {
-    text-decoration: none;
-  }
+.left-column {
+  flex: 0 0 40%;
+  min-width: 300px;
+  position: relative;
+}
 
 
-  .logout-btn a{
-    text-decoration: none;
-  }
-  
-  .edit-btn {
-    background-color: #fff;
-    color: #1f356b;
-    margin-bottom: 10px;
-  }
+.bg-image {
+  width: 100%;
+  height: 250px;
+  background: url("https://raw.githubusercontent.com/alejmmtz/Parcial-1-Pok-dex/main/Elementos/985-20231202231601-af41d69a-5725-4eb8-bfe0-abbff65da011.jpg") no-repeat center/cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
 
-  .edit-btn:hover {
-    background-color: #eaeaea;
-  }
-  
-  .logout-btn {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-  }
-  .logout-btn:hover {
-    background-color: #2d468d;
-  }
-  
- 
-  .right-column {
-    flex: 1;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  }
-  
-  a {
-    text-decoration: none;
-    color: #1d1d1b;
-  }
+.profile-card {
+  background-color: #1f356b;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .fav-title {
-    font-size: 1.3rem;
-    margin: 10px;
-    margin-bottom: 25px;
-  }
-  
 
-  .pokemon-cards {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
+.user-name {
+  font-size: 30px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
 
-  .pokemon-card {
-    width: 150px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    overflow: hidden;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 2.5px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .pokemon-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .pokemon-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 0px;
-  }
-  
-  .pokemon-name {
-    font-weight: bold;
-    font-size: 15px;
-    margin: 0;
-  }
-  
-  .pokemon-id {
-    font-size: 15px;
-    margin: 4px 0 0;
-  }
-   
+.user-handle {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: -10px;
+}
 
-  .type-normal {
-    background: linear-gradient(135deg, #4a4a34 0%, #A8A878 100%);
-  }
-  .type-fire {
-    background: linear-gradient(135deg, #F08030 0%, #F8D030 100%);
-  }
-  .type-water {
-    background: linear-gradient(135deg, #344a80 0%, #98D8D8 100%);
-  }
-  .type-grass {
-    background: linear-gradient(135deg, #548f36 0%, #A8E060 100%);
-  }
-  .type-electric {
-    background: linear-gradient(135deg, #ffbf00 0%, #F8D030 100%);
-  }
-  .type-ice {
-    background: linear-gradient(135deg, #3fbcbc 0%, #98D8D8 100%);
-  }
-  .type-fighting {
-    background: linear-gradient(135deg, #e76305 0%, #C03028 100%);
-  }
-  .type-poison {
-    background: linear-gradient(135deg, #53024c 0%, #A040A0 100%);
-  }
-  .type-ground {
-    background: linear-gradient(135deg, #838a04 0%, #d4e454 100%);
-  }
-  .type-flying {
-    background: linear-gradient(135deg, #b2abc6 0%, #9479e5 100%);
-  }
-  .type-psychic {
-    background: linear-gradient(135deg, #e4088c  0%, #e66189 100%);
-  }
-  .type-bug {
-    background: linear-gradient(135deg, #69d808 0%, #a4b509 100%);
-  }
-  .type-rock {
-    background: linear-gradient(135deg, #4d4b02  0%, #B8A038 100%);
-  }
-  .type-ghost {
-    background: linear-gradient(135deg, #b562f4 0%, #705898 100%);
-  }
-  .type-dark {
-    background: linear-gradient(135deg, #281d35 0%, #564134 100%);
-  }
-  .type-dragon {
-    background: linear-gradient(135deg, #392f6e 0%, #7038F8 100%);
-  }
+.account-date {
+  font-size: 15px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.edit-btn,
+.logout-btn {
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit,
+.logout {
+  text-decoration: none;
+}
+
+
+.logout-btn a {
+  text-decoration: none;
+}
+
+.edit-btn {
+  background-color: #fff;
+  color: #1f356b;
+  margin-bottom: 10px;
+}
+
+.edit-btn:hover {
+  background-color: #eaeaea;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.logout-btn:hover {
+  background-color: #2d468d;
+}
+
+
+.right-column {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: #1d1d1b;
+}
+
+.fav-title {
+  font-size: 1.3rem;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+
+
+.pokemon-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pokemon-card {
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 2.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0px;
+}
+
+.pokemon-name {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+}
+
+.pokemon-id {
+  font-size: 15px;
+  margin: 4px 0 0;
+}
+
+
+.type-normal {
+  background: linear-gradient(135deg, #4a4a34 0%, #A8A878 100%);
+}
+
+.type-fire {
+  background: linear-gradient(135deg, #F08030 0%, #F8D030 100%);
+}
+
+.type-water {
+  background: linear-gradient(135deg, #344a80 0%, #98D8D8 100%);
+}
+
+.type-grass {
+  background: linear-gradient(135deg, #548f36 0%, #A8E060 100%);
+}
+
+.type-electric {
+  background: linear-gradient(135deg, #ffbf00 0%, #F8D030 100%);
+}
+
+.type-ice {
+  background: linear-gradient(135deg, #3fbcbc 0%, #98D8D8 100%);
+}
+
+.type-fighting {
+  background: linear-gradient(135deg, #e76305 0%, #C03028 100%);
+}
+
+.type-poison {
+  background: linear-gradient(135deg, #53024c 0%, #A040A0 100%);
+}
+
+.type-ground {
+  background: linear-gradient(135deg, #838a04 0%, #d4e454 100%);
+}
+
+.type-flying {
+  background: linear-gradient(135deg, #b2abc6 0%, #9479e5 100%);
+}
+
+.type-psychic {
+  background: linear-gradient(135deg, #e4088c 0%, #e66189 100%);
+}
+
+.type-bug {
+  background: linear-gradient(135deg, #69d808 0%, #a4b509 100%);
+}
+
+.type-rock {
+  background: linear-gradient(135deg, #4d4b02 0%, #B8A038 100%);
+}
+
+.type-ghost {
+  background: linear-gradient(135deg, #b562f4 0%, #705898 100%);
+}
+
+.type-dark {
+  background: linear-gradient(135deg, #281d35 0%, #564134 100%);
+}
+
+.type-dragon {
+  background: linear-gradient(135deg, #392f6e 0%, #7038F8 100%);
+}
+
 .type-steel {
-    background: linear-gradient(135deg, #666769 0%, #b8b8df 100%);
-  }
+  background: linear-gradient(135deg, #666769 0%, #b8b8df 100%);
+}
+
 .type-fairy {
-    background: linear-gradient(135deg, #da527f 0%, #F0B6BC 100%);
-  }
+  background: linear-gradient(135deg, #da527f 0%, #F0B6BC 100%);
+}
 
-  
- 
-  
-  .site-footer {
-    background-color: #1d1d1b;
-    color: #fff;
-    padding: 50px 100px;
-    margin-top: 100px;
-  }
 
-  
-  .footer-columns {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-  }
-  
- .footer-col {
-    display: flex;
-    flex-direction: row;
- }
 
- .footer-col i{
-margin-right: 20px;
-font-size: 30px;
-text-decoration: none;
-color: whitesmoke;
- }
 
-  .footer-col h4 {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-    margin-right: 100px;
-  }
-  
-  .footer-col ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-col ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-  
-  .footer-col ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #444;
-    padding-top: 15px;
-    font-size: 0.85rem;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-  }
-  
-  .legal-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 15px;
-  }
-  
-  .legal-links a:hover {
-    text-decoration: underline;
-  }
+.site-footer {
+  background-color: #1d1d1b;
+  color: #fff;
+  padding: 50px 100px;
+  margin-top: 100px;
+}
+
+
+.footer-columns {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-col i {
+  margin-right: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+
+.footer-col ul li {
+  margin-bottom: 5px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 0.85rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.legal-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}

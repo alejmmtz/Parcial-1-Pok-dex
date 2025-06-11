@@ -1,239 +1,235 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Poppins", "DM Sans", sans-serif;
-    background-image: url("https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/ZOOM_BG_goods_A_1920.jpg?raw=true");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    color: #333;
-  }
-  
- 
-  .container {
-    display: flex;
-    width: 80%;
-    margin: 5% auto 10px;      
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  }
-  
-  .left-column {
-    width: 50%;
-    background-color: #1f356b; 
-    color: #fff;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-  
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 15px;
-  }
-  
-  .text-info h2 {
-    font-size: 25px;
-    margin-bottom: 0px;
-  }
-  
-  .text-info p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    opacity: 0.7;
-  }
-  
-  .form-group {
-    margin-bottom: 0px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 15px;
-  }
-  
-  .input-change-group {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
-  }
-  
-  .input-text {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-  }
-  
-  .change-btn {
-    background-color: #FFCC00;
-    color: #1d1d1b;
-    border: none;
-    padding: 10px 18px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  .change-btn:hover {
-    box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
-  }
-  
-  .right-column {
-    width: 50%;
-    background: url("https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/985-20231202231601-af41d69a-5725-4eb8-bfe0-abbff65da011.jpg?raw=true")
-                no-repeat center/cover;
-    min-height: 250px; 
-    max-height: 800px;
-  }
-  
-  .logout-btn {
-    background-color: #1f356b;
-    color: #eeeeee;
-    width: 150px;
-    padding: 13px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    display: inline-block;      
-    margin-left: 10%; 
-    text-align: center;  
-    margin-bottom: 20px;
-  }
-  
-  .logout-btn:hover {
-    box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
-  }
-  
-  .goback-btn {
-    background-color: #1f356b;
-    color: #eeeeee;
-    width: 150px;
-    padding: 13px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    display: inline-block;      
-    margin-left: 1%;
-    text-align: center;  
-  }
-  
-  .goback-btn:hover {
-    box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
-  }
-  
-  .modal {
-    display: none; 
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
-  }
-  
-  .modal:target {
-    display: block;
-  }
-  
-  .modal-content {
-    background-color: #1f356b;
-    width: 350px;
-    margin: 5% auto;
-    border-radius: 8px;
-    padding: 20px;
-    position: relative;
-    color: #fff;
-  }
-  
-  .close-btn {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2rem;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-  }
-  
-  .modal-title {
-    margin-top: 0;
-    font-size: 1.4rem;
-  }
-  
-  .modal-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  
-  .modal-form label {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-size: 0.95rem;
-  }
-  
-  .modal-form input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .ok-btn {
-    margin-top: 20px;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    background-color: #FFCC00;
-    color: #1f356b;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .ok-btn:hover {
-    background-color: #e6b800;
-  }
-
-  .emcabezadoin {
-    position: fixed; 
-    bottom: 0;    
-    top: 1;
-    width: 100%;  
-    background-color: #1d1d1b;
-    font-size: 15px;
-    color: #ddd;
-    text-align: center;
-    padding: 15px;
-    font-style: italic;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
 
-  
+body {
+  font-family: "Poppins", "DM Sans", sans-serif;
+  background-image: url("https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/ZOOM_BG_goods_A_1920.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: 5% auto 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.left-column {
+  width: 50%;
+  background-color: #1f356b;
+  color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.text-info h2 {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.text-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.input-change-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-text {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.change-btn {
+  background-color: #FFCC00;
+  color: #1d1d1b;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.change-btn:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+}
+
+.right-column {
+  width: 50%;
+  background: url("https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/985-20231202231601-af41d69a-5725-4eb8-bfe0-abbff65da011.jpg?raw=true") no-repeat center/cover;
+  min-height: 250px;
+  max-height: 800px;
+}
+
+.logout-btn {
+  background-color: #1f356b;
+  color: #eeeeee;
+  width: 150px;
+  padding: 13px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+}
+
+.goback-btn {
+  background-color: #1f356b;
+  color: #eeeeee;
+  width: 150px;
+  padding: 13px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 1%;
+  text-align: center;
+}
+
+.goback-btn:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 91, 181, 0.7);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal-content {
+  background-color: #1f356b;
+  width: 350px;
+  margin: 5% auto;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.close-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.modal-title {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.modal-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.modal-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.ok-btn {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: #FFCC00;
+  color: #1f356b;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ok-btn:hover {
+  background-color: #e6b800;
+}
+
+.emcabezadoin {
+  position: fixed;
+  bottom: 0;
+  top: 1;
+  width: 100%;
+  background-color: #1d1d1b;
+  font-size: 15px;
+  color: #ddd;
+  text-align: center;
+  padding: 15px;
+  font-style: italic;
+}

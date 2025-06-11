@@ -76,7 +76,8 @@ nav a:hover {
     font-weight: bold;
 }
 
-.types, .evolutions {
+.types,
+.evolutions {
     margin-top: 20px;
 }
 
@@ -88,6 +89,7 @@ button {
     margin-right: 10px;
     border-radius: 20px;
 }
+
 .normal {
     background-color: #A8A878;
     color: white;
@@ -187,13 +189,16 @@ button {
     width: 100px;
     height: 120px;
 }
+
 .front {
     margin: 0;
 }
+
 .back {
     margin-right: 35px;
     margin-left: 0px;
 }
+
 .shiny {
     margin: 0;
 }
@@ -221,79 +226,79 @@ button {
     color: #fff;
     padding: 50px 100px;
     margin-top: 50px;
-  }
+}
 
-  
-  .footer-columns {
+
+.footer-columns {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
-  }
-  
- .footer-col {
+}
+
+.footer-col {
     display: flex;
     flex-direction: row;
- }
+}
 
- .footer-col i{
-margin-right: 20px;
-font-size: 30px;
-text-decoration: none;
-color: whitesmoke;
- }
+.footer-col i {
+    margin-right: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: whitesmoke;
+}
 
-  .footer-col h4 {
+.footer-col h4 {
     margin-bottom: 10px;
     font-size: 1rem;
     font-weight: bold;
-  }
-  
-  .footer-col ul {
+}
+
+.footer-col ul {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
     margin-right: 100px;
-  }
-  
-  .footer-col ul li {
+}
+
+.footer-col ul li {
     margin-bottom: 5px;
-  }
-  
-  .footer-col ul li a {
+}
+
+.footer-col ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 0.95rem;
-  }
-  
-  .footer-col ul li a:hover {
-    text-decoration: underline;
-  }
-  
+}
 
-  .footer-bottom {
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #444;
     padding-top: 15px;
     font-size: 15px;
-  }
-  
-  .footer-bottom p {
+}
+
+.footer-bottom p {
     margin: 0;
-  }
-  
-  .legal-links a {
+}
+
+.legal-links a {
     color: #fff;
     text-decoration: none;
     margin-left: 15px;
-  }
-  
-  .legal-links a:hover {
+}
+
+.legal-links a:hover {
     text-decoration: underline;
-  }
-  
-  .favorite-btn {
+}
+
+.favorite-btn {
     margin-left: 10px;
     background-color: #e6d9db;
     color: white;
@@ -308,4 +313,3 @@ color: whitesmoke;
     background-color: #eb8695;
     transform: scale(1.05);
 }
-

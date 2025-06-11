@@ -63,4 +63,4 @@ document.querySelectorAll('.about-us .perfil').forEach((div, i) => {
     div.querySelector('.job').href = p.link;
     div.querySelector('.descripcion').textContent = p.descripcion;
     div.querySelector('.pokemon').textContent = `Favourite Pokémon: ${p.pokemon}`;
-  });
+});
