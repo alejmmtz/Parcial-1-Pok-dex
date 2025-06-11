@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" />
   <title>Pokémon Database</title>
-  <link rel="stylesheet" href="../Styles/register.css" />
+  <link rel="stylesheet" href="../css/register1.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -23,31 +23,27 @@
     </div>
 
     <div class="right">
-      <h2>Create an Account</h2>
-      <p class="subtitle">Out there are more than 1,025 Pokémon waiting for you.</p>
+      <h2>You are One Step Away</h2>
+      <p class="subtitle">Create Your Trainer Identity.</p>
       <div class="errors"></div>
 
-      <form id="register-form">
-        <label for="email">User Email</label>
-        <input type="email" id="email" placeholder="emailexample@gmail.com" required />
+      <form id="register1-form">
+        <label for="username">Create a Username.</label>
+        <input type="text" id="username" placeholder="Make sure to not include any offensive word." required />
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Type your Password" required />
+        <label for="name">Tell us Your Name.</label>
+        <input type="text" id="name" placeholder="First Name" required />
 
-        <label for="confirmPassword">Confirm Your Password</label>
-        <input type="password" id="confirmPassword" placeholder="Type your Password again" required />
+        <label for="birthdate">Tell us Your Birthday.</label>
+        <input type="date" id="birthdate" required />
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Continue</button>
+
       </form>
-
-      <p class="signup-text">
-        You already have an account? <br />
-        <a href="login.html">Login</a>
-      </p>
     </div>
   </div>
 
-  <script src="../JavaScript/register.js"></script>
+  <script src="../js/register1.js"></script>
 
 </body>
 

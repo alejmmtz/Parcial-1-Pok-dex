@@ -37,7 +37,7 @@ const users = [
 
         if (usuario) {
             sessionStorage.setItem('currentUser', JSON.stringify(usuario));
-            window.location.href = 'landing2.html';
+            window.location.href = 'index2.html';
         } else {
             errorlogin.textContent = 'Check the Username or Password';
         }
