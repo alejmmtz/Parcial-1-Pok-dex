@@ -82,21 +82,24 @@ function renderCharacter(pokemon) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const randomBtn = document.querySelector('#random-btn');
-  randomBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * pokemones.length);
-    const randomPokemon = pokemones[randomIndex];
-    window.location.href = `tarjeta.html?numero=${randomPokemon.numero}`;
-  });
+  if (randomBtn) { 
+    randomBtn.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * pokemones.length);
+      const randomPokemon = pokemones[randomIndex];
+      window.location.href = `tarjeta.html?numero=${randomPokemon.numero}`;
+    });
+  }
 });
-
 
 function DisplayCharacters() {
   const container = document.getElementById('pokemon-card');
 
-  pokemones.forEach(pokemon => {
-    const card = renderCharacter(pokemon);
-    container.appendChild(card);
-  });
+  if (container) {
+    pokemones.forEach(pokemon => {
+      const card = renderCharacter(pokemon);
+      container.appendChild(card);
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', DisplayCharacters);

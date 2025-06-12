@@ -1,4 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
+async function obtenerDatosBasicosPokemon(id) {
+    const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const datos = await respuesta.json();
+    return {
+        nombre: datos.name,
+        numero: datos.id,
+        tipos: datos.types.map((t) => t.type.name),
+        urlImagenPrincipal: datos.sprites.other["official-artwork"].front_default,
+    };
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
   const userJSON = sessionStorage.getItem('currentUser');
   if (!userJSON) {
     window.location.href = 'login.html';
@@ -19,25 +30,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if (userBirth) userBirth.textContent = user.birthdate;
 
   const favContainer = document.querySelector('#favorites-container');
+    if (!favContainer) {
+        console.error("Contenedor de favoritos no encontrado.");
+        return;
+    }
 
-  if (Array.isArray(user.favoritepokemon)) {
-    user.favoritepokemon.forEach(id => {
-      const p = pokemones.find(x => x.numero === id);
-      if (!p) return;
+     if (Array.isArray(user.favoritepokemon)) {
+        const pokemonPromises = user.favoritepokemon.map(async id => {
+            try {
+                return await obtenerDatosBasicosPokemon(id);
+            } catch (error) {
+                alert(`Error al obtener datos para el Pokémon con ID ${id}:`, error);
+                return ""; 
+            }
+        });
 
-      const card = document.createElement('div');
-      card.className = `pokemon-card type-${p.tipo}`;
-      card.innerHTML = `
-          <img
-            src="${p.imagenURL}"
-          />
+      if (Array(user.favoritepokemon)) {
+
+        const pokemonPromises = user.favoritepokemon.map(id => obtenerDatosBasicosPokemon(id));
+
+        const PokemonData = await Promise.all(pokemonPromises); 
+        //p son los datos de los poke
+        const valided = PokemonData.filter(p => p !== null);
+
+        // Aqui crea un array con todos los resultados de los pokes validados
+        const cards = valided.map(p =>
+        `<div class="pokemon-card type-${p.tipos[0]}" onclick="window.location.href='tarjeta.html?numero=${p.numero}'">
+          <img src="${p.urlImagenPrincipal}" alt="${p.nombre}"/>
           <p class="pokemon-name">${p.nombre}</p>
           <p class="pokemon-id">${String(p.numero).padStart(3, '0')}</p>
-        `;
-      card.addEventListener('click', () => {
-        window.location.href = `tarjeta.html?numero=${p.numero}`;
-      });
-      favContainer.appendChild(card);
-    });
-  }
+        </div>`).join('');
+        //el join convierte la información de los pokes "cadenas de texto" en una sola más grande, unificandolas//
+
+        favContainer.innerHTML = cards;
+    } 
+  } 
 });
