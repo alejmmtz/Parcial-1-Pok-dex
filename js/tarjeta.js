@@ -112,6 +112,48 @@ document.addEventListener("DOMContentLoaded", async () => {
         const H1 = contenedorInfo.querySelector("h1");
         if (H1) {
             H1.innerHTML = `${nombre} <button class="favorite-btn" title="Add to Favorites">❤️</h1>`;
+            //Favoritos//
+            const botonFavorito = document.querySelector(".favorite-btn");
+            if (botonFavorito) {
+                botonFavorito.addEventListener("click", () => {
+                    const userJSON = sessionStorage.getItem("currentUser");
+                    if (!userJSON) {
+                        alert("Inicia sesión para administrar favoritos");
+                        return;
+                    }
+
+                    const user = JSON.parse(userJSON);
+                    if (!user.favoritepokemon) {
+                        user.favoritepokemon = [];
+                    }
+
+                    const inFav = user.favoritepokemon.includes(datosBasicos.numero);
+
+                    if (inFav) {
+                        user.favoritepokemon = user.favoritepokemon.filter(num => num !== datosBasicos.numero);
+                        alert("Deleted from favourites");
+                    } else {
+                        user.favoritepokemon.push(datosBasicos.numero);
+                        alert("Added to favourites");
+                    }
+
+                    sessionStorage.setItem("currentUser", JSON.stringify(user));
+
+                    const usersJSON = localStorage.getItem("users");
+                    if (usersJSON) {
+                        const users = JSON.parse(usersJSON);
+
+                        for (let i = 0; i < users.length; i++) {
+                            if (users[i].username === user.username) {
+                                users[i] = user;
+                                break;
+                            }
+                        }
+
+                        localStorage.setItem("users", JSON.stringify(users));
+                    }
+                });
+            }
         };
 
         const H3 = contenedorInfo.querySelector("h3");
