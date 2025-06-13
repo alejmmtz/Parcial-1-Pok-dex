@@ -74,7 +74,7 @@ nav a:hover {
 .texto h1 {
   font-size: 55px;
   line-height: 1;
-  margin-top: 300px;
+  margin-top: 400px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
@@ -99,6 +99,7 @@ nav a:hover {
   border: none;
   padding: 20px 35px;
   font-size: 20px;
+    margin-top: 25px;
   border-radius: 50px;
   cursor: pointer;
   position: relative;
@@ -123,7 +124,7 @@ nav a:hover {
 }
 
 .seccion-imagenes2 {
-  margin-top: 50px;
+  margin-top: -75px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -245,7 +246,7 @@ nav a:hover {
 .perfil {
   text-align: center;
   background-color: whitesmoke;
-  max-width: 250px;
+  max-width: 400px;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -289,7 +290,7 @@ nav a:hover {
   background-color: #1d1d1b;
   color: #fff;
   padding: 50px 100px;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 

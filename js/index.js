@@ -137,14 +137,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.preventDefault();
 
                 const email = document.getElementById("FormEmail").value;
-                const comment = document.getElementById("FormComment").value;
+                const Message = document.getElementById("FormComment").value;
                 const timestamp = new Date().toISOString();
 
                 const messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
-                messages.push({ email, comment, timestamp });
+                messages.push({ email, Message, timestamp });
                 localStorage.setItem("contactMessages", JSON.stringify(messages));
 
-                alert("Message saved!");
+                alert("Message sent!");
                 form.reset();
             });
         }

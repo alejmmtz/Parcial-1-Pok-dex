@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         alert("Deleted from favourites");
                     } else {
                         user.favoritepokemon.push(datosBasicos.numero);
-                        alert("Added to favourites");
+                        alert("Added to favorites");
                     }
 
                     sessionStorage.setItem("currentUser", JSON.stringify(user));
@@ -215,6 +215,7 @@ ${datosBasicos.tipos.map((tipo) => `<button class="${tipo}">${tipo}</button>`).j
 
         contenedorInfo.innerHTML = "<p>Lo sentimos, ocurrió un error al cargar los datos del Pokémon.</p>";
     }
+
+    
 });
 
-//Mensaje de prueba//

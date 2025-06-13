@@ -50,17 +50,13 @@ nav a:hover {
 
 
 .titulo {
-  background-color: whitesmoke;
   font-size: 25px;
   padding-top: 40px;
   padding-left: 100px;
-  margin-bottom: -50px;
 }
 
 .subtitulo {
-  background-color: whitesmoke;
   font-size: 15px;
-  margin-bottom: -50px;
   padding-left: 100px;
 }
 
@@ -132,7 +128,7 @@ nav a:hover {
 
 .heart-btn {
   background: none;
-  border: 2px solid whitesmoke;
+  border: 2px solid white;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -140,6 +136,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #003A70;
 }
 
 .heart-btn img {
@@ -147,9 +144,6 @@ nav a:hover {
   height: 30px;
 }
 
-.heart-btn:hover {
-  background-color: #f0f0f0;
-}
 
 .filter-right {
   display: flex;

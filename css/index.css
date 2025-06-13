@@ -97,6 +97,7 @@ nav a:hover {
   color: #fff;
   border: none;
   padding: 20px 35px;
+  margin-top: 25px;
   font-size: 20px;
   border-radius: 50px;
   cursor: pointer;
@@ -122,7 +123,7 @@ nav a:hover {
 }
 
 .seccion-imagenes2 {
-  margin-top: -25px;
+  margin-top: -75px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
