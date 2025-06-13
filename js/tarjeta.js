@@ -20,7 +20,7 @@ const trianguloPorTipo = {
 
 };
 document.addEventListener('DOMContentLoaded', () => {
-    const userJSON = sessionStorage.getItem('currentUser');
+    const userJSON = localStorage.getItem('currentUser');
     if (!userJSON) {
         location.href = 'login.html';
         return;
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const botonFavorito = document.querySelector(".favorite-btn");
             if (botonFavorito) {
                 botonFavorito.addEventListener("click", () => {
-                    const userJSON = sessionStorage.getItem("currentUser");
+                    const userJSON = localStorage.getItem("currentUser");
                     if (!userJSON) {
                         alert("Inicia sesión para administrar favoritos");
                         return;
@@ -131,13 +131,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                     if (inFav) {
                         user.favoritepokemon = user.favoritepokemon.filter(num => num !== datosBasicos.numero);
-                        alert("Deleted from favourites");
+                        alert("Deleted from favorites");
                     } else {
                         user.favoritepokemon.push(datosBasicos.numero);
                         alert("Added to favorites");
                     }
 
-                    sessionStorage.setItem("currentUser", JSON.stringify(user));
+                    localStorage.setItem("currentUser", JSON.stringify(user));
 
                     const usersJSON = localStorage.getItem("users");
                     if (usersJSON) {
@@ -216,6 +216,6 @@ ${datosBasicos.tipos.map((tipo) => `<button class="${tipo}">${tipo}</button>`).j
         contenedorInfo.innerHTML = "<p>Lo sentimos, ocurrió un error al cargar los datos del Pokémon.</p>";
     }
 
-    
+
 });
 
