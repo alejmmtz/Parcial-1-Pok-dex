@@ -33,7 +33,7 @@ const pokemones = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-  const userJSON = sessionStorage.getItem('currentUser');
+  const userJSON = localStorage.getItem('currentUser');
   if (!userJSON) {
     location.href = 'login.html';
     return;
