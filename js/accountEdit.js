@@ -1,90 +1,76 @@
-function user(username, email, password, name, birthdate, favoritepokemon) {
-  this.username = username;
-  this.email = email;
-  this.password = password;
-  this.name = name;
-  this.birthdate = birthdate;
-}
+document.addEventListener('DOMContentLoaded', () => {
 
-const users = [
-  new user("alejmmtz", "alejomum@gmail.com", "RomanticoSalvaj3", "Alejandro", "2007-04-16", [1, 2, 3]),
+  const USERS_KEY   = 'databaseUsers';
+  const SESSION_KEY = 'currentUser';
 
-  new user("carlos01", "carlosgiraldo@gmail.com", "Carlos01", "Carlos", "2007-04-16", [4, 5, 6]),
+  const displayNameEl     = document.querySelector('#display-name');
+  const displayUsernameEl = document.querySelector('#display-username');
+  const emailInput        = document.querySelector('#user-email');
+  const emailBtn          = document.querySelector('#change-email-btn');
+  const passInput         = document.querySelector('#user-password');
+  const passBtn           = document.querySelector('#change-password-btn');
 
-  new user("100gecs", "100gecs@gmail.com", "123", "Laura", "2007-04-16", [7, 8, 9, 1]),
-
-  new user("esteman", "estebodrioman@gmail.com", "54321", "Esteban", "2007-04-16", [10, 11, 12]),
-
-  new user("4mdaa", "elmeselm@gmail.com", "12345", "Marcos", "2007-04-16", [13, 14, 15, 3]),
-
-  new user("saikorito", "saikoroo@gmail.com", "123", "David", "2007-04-16", [1, 3, 8])
-];
-
-let usuarioActivo = users[0];
-
-
-function renderPerfil() {
-  document.querySelector(".text-info h2").textContent = usuarioActivo.nombre;
-  document.querySelector(".text-info p").textContent = "@" + usuarioActivo.username;
-  document.getElementById("user-email").value = usuarioActivo.email;
-  document.querySelector(".text-info p:last-of-type").textContent = `Account created in ${usuarioActivo.birthdate}.`;
-}
-
-renderPerfil();
-
-
-
-// Abrir modal de cambio de correo
-document.getElementById("abrirEmail").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("changeemail").style.display = "flex";
-});
-
-document.querySelector("#changeemail .close-btn").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("changeemail").style.display = "none";
-});
-
-document.getElementById("formEmail").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const nuevoEmail = document.getElementById("nuevoEmail").value;
-  usuarioActivo.email = nuevoEmail;
-  renderPerfil();
-  alert("Email actualizado correctamente");
-  document.getElementById("changeemail").style.display = "none";
-});
-
-
-
-//Cambiar contraseña
-document.querySelector("a[href='#changepassword']").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("changepassword").style.display = "flex";
-});
-
-document.querySelector("#changepassword .close-btn").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("changepassword").style.display = "none";
-});
-
-document.querySelector(".modal-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const actual = document.getElementById("current-pass").value;
-  const nueva = document.getElementById("new-pass").value;
-  const confirmar = document.getElementById("confirm-pass").value;
-
-  if (actual !== usuarioActivo.password) {
-    alert("La contraseña actual no es correcta.");
+  const currentUser = JSON.parse(localStorage.getItem(SESSION_KEY));
+  if (!currentUser) {
+    window.location.href = 'account.html';
     return;
   }
 
-  if (nueva !== confirmar) {
-    alert("Las nuevas contraseñas no coinciden.");
-    return;
+  displayNameEl.textContent     = currentUser.name;
+  displayUsernameEl.textContent = '@' + currentUser.username;
+  emailInput.value              = currentUser.email;
+
+  function updateField(field, newValue) {
+    const users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+    const idx = users.findIndex(u => u.email === currentUser.email);
+    if (idx !== -1) {
+      users[idx][field] = newValue;
+      localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    }
+    currentUser[field] = newValue;
+    localStorage.setItem(SESSION_KEY, JSON.stringify(currentUser));
   }
 
-  usuarioActivo.password = nueva;
-  alert("Contraseña actualizada con éxito.");
+  emailBtn.addEventListener('click', () => {
+    if (emailInput.hasAttribute('readonly')) {
+      emailInput.removeAttribute('readonly');
+      emailInput.focus();
+      emailBtn.textContent = 'Save';
+    } else {
+      const newEmail = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(newEmail)) {
+        alert('Formato de email inválido');
+        emailInput.focus();
+        return;
+      }
+      updateField('email', newEmail);
+      emailInput.setAttribute('readonly', '');
+      emailBtn.textContent = 'Change';
+      alert('Email actualizado correctamente');
+    }
+  });
 
-  document.getElementById("changepassword").style.display = "none";
+  passBtn.addEventListener('click', () => {
+    if (passInput.hasAttribute('readonly')) {
+      passInput.removeAttribute('readonly');
+      passInput.value = '';
+      passInput.placeholder = '';
+      passInput.focus();
+      passBtn.textContent = 'Save';
+    } else {
+      const newPass = passInput.value;
+      if (newPass.length < 6) {
+        alert('La contraseña debe tener al menos 6 caracteres');
+        passInput.focus();
+        return;
+      }
+      updateField('password', newPass);
+      passInput.setAttribute('readonly', '');
+      passInput.value = '';
+      passInput.placeholder = '********';
+      passBtn.textContent = 'Change';
+      alert('Contraseña actualizada correctamente');
+    }
+  });
 });

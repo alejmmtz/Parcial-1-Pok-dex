@@ -21,32 +21,31 @@
         <img src="https://github.com/alejmmtz/Parcial-1-Pok-dex/blob/main/Elementos/image.png?raw=true"
           alt="Avatar Pikachu" class="avatar">
         <div class="text-info">
-          <h2>Alejandro</h2>
-          <p>@alejmmtz</p>
-          <p>Account created in March 13, 2025.</p>
+          <h2 id="display-name">Usuario</h2>
+          <p id="display-username">@usuario</p>
         </div>
       </div>
       <div class="form-group">
-        <label for="user-email">Current User Email</label>
+        <label for="user-email">New User Email</label>
         <div class="input-change-group">
-          <input type="email" id="user-email" class="input-text" value="alejomum@gmail.com" />
-          <a href="#changeemail" class="change-btn">Change</a>
+          <input type="email" id="user-email" class="input-text" />
+          <button id="change-email-btn" class="change-btn">Change</button>
         </div>
       </div>
       <div class="form-group">
-        <label for="password">Change Your Password</label>
+        <label for="user-password">New Password</label>
         <div class="input-change-group">
-          <input type="password" id="password" class="input-text" placeholder="********" />
-          <a href="#changepassword" class="change-btn">Change</a>
+          <input type="password" id="user-password" class="input-text" />
+          <button id="change-password-btn" class="change-btn">Change</button>
         </div>
       </div>
     </section>
     <section class="right-column"></section>
   </main>
+
   <section>
-    <a href="Landing.html"><button class="logout-btn">Log out</button></a>
-    <a href="account.html"><button class="goback-btn">Go back</button>
-    </a>
+    <a href="../index.html"><button class="logout-btn">Log out</button></a>
+    <a href="account.html"><button class="goback-btn">Go back</button></a>
   </section>
 
   <footer class="emcabezadoin">
@@ -54,34 +53,7 @@
   </footer>
 
 
-  <div id="changepassword" class="modal">
-    <div class="modal-content">
-      <a href="#" class="close-btn">&times;</a>
-      <h2 class="modal-title">Change Your Password</h2>
-      <form class="modal-form">
-        <label for="current-pass">Current Password</label>
-        <input type="password" id="current-pass">
-        <label for="new-pass">New Password</label>
-        <input type="password" id="new-pass">
-        <label for="confirm-pass">Confirm New Password</label>
-        <input type="password" id="confirm-pass">
-        <button type="submit" class="ok-btn">OK</button>
-      </form>
-    </div>
-  </div>
-
-  <div id="changeemail" class="modal">
-    <div class="modal-content">
-      <a href="#" class="close-btn">&times;</a>
-      <h2 class="modal-title">Your E-Mail has been changed.</h2>
-      <form class="modal-form" id="formEmail">
-        <label for="nuevoEmail">New Email</label>
-        <input type="email" id="nuevoEmail" required>
-        <button type="submit" class="ok-btn">Save</button>
-      </form>
-    </div>
-  </div>
-
+  <script src="../js/accountEdit.js"></script>
 </body>
 
 </html>

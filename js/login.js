@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     if (usuario) {
-      sessionStorage.setItem('currentUser', JSON.stringify(usuario));
+      localStorage.setItem('currentUser', JSON.stringify(usuario));
       window.location.href = 'index2.html';
     } else {
       errorlogin.textContent = 'Check the Username or Password';
