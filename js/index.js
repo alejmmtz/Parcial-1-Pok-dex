@@ -6,31 +6,22 @@ const imagenes = [
 
 let indiceActual = 1;
 
-const slideLeft = document.querySelector(".slide-left img");
-const slideCenter = document.querySelector(".slide-center img");
-const slideRight = document.querySelector(".slide-right img");
-const flechas = document.querySelectorAll(".arrow img");
 
-function actualizarCarrusel() {
+function actualizarCarrusel(slideLeft, slideCenter, slideRight) {
     let izquierda = (indiceActual - 1 + imagenes.length) % imagenes.length;
     let derecha = (indiceActual + 1) % imagenes.length;
 
-    slideLeft.src = imagenes[izquierda];
-    slideCenter.src = imagenes[indiceActual];
-    slideRight.src = imagenes[derecha];
+
+    if (slideLeft && slideCenter && slideRight) {
+        slideLeft.src = imagenes[izquierda];
+        slideCenter.src = imagenes[indiceActual];
+        slideRight.src = imagenes[derecha];
+    } else {
+
+        console.error("Error: Elementos del carrusel no encontrados. Verifica tu HTML.");
+    }
 }
 
-flechas[0].addEventListener("click", () => {
-    indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
-    actualizarCarrusel();
-});
-
-flechas[1].addEventListener("click", () => {
-    indiceActual = (indiceActual + 1) % imagenes.length;
-    actualizarCarrusel();
-});
-
-actualizarCarrusel();
 
 const perfiles = [
     {
@@ -59,12 +50,105 @@ const perfiles = [
     }
 ];
 
-document.querySelectorAll('.about-us .perfil').forEach((div, i) => {
-    const p = perfiles[i];
-    div.querySelector('.perfil-imagen').src = p.imagen;
-    div.querySelector('h3').textContent = p.nombre;
-    div.querySelector('.job').textContent = p.job;
-    div.querySelector('.link').href = p.link;
-    div.querySelector('.descripcion').textContent = p.descripcion;
-    div.querySelector('.pokemon').textContent = `Favourite Pokémon: ${p.pokemon}`;
+
+const contactFormHTML = `
+    <h4>Contact us</h4>
+    <div class="boton up">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Text us
+        </button>
+        <form class="dropdown-menu p-4" id="contactForm">
+            <div class="mb-3">
+                <h3>Let us know your suggestions</h3>
+                <label for="FormEmail" class="form-label">
+                    <h4>Email Address</h4>
+                </label>
+                <input type="email" class="form-control" id="FormEmail" placeholder="email@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="FormComment" class="form-label">
+                    <h4>Pokecomment</h4>
+                </label>
+                <input type="text" class="form-control" id="FormComment" placeholder="comment" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+`;
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const slideLeft = document.querySelector(".slide-left img");
+    const slideCenter = document.querySelector(".slide-center img");
+    const slideRight = document.querySelector(".slide-right img");
+    const flechas = document.querySelectorAll(".arrow img");
+
+    if (slideLeft && slideCenter && slideRight && flechas.length === 2) {
+
+        actualizarCarrusel(slideLeft, slideCenter, slideRight);
+
+
+        flechas[0].addEventListener("click", () => {
+            indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+            actualizarCarrusel(slideLeft, slideCenter, slideRight);
+        });
+
+        flechas[1].addEventListener("click", () => {
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            actualizarCarrusel(slideLeft, slideCenter, slideRight);
+        });
+    } else {
+        console.log("Elementos del carrusel no encontrados en esta página. Si esta es una página del carrusel, verifica tu HTML.");
+    }
+
+
+
+    const perfilDivs = document.querySelectorAll('.about-us .perfil');
+    if (perfilDivs.length > 0) {
+        perfilDivs.forEach((div, i) => {
+            const p = perfiles[i];
+            if (p) {
+                div.querySelector('.perfil-imagen').src = p.imagen;
+                div.querySelector('h3').textContent = p.nombre;
+                div.querySelector('.job').textContent = p.job;
+                div.querySelector('.link').href = p.link;
+                div.querySelector('.descripcion').textContent = p.descripcion;
+                div.querySelector('.pokemon').textContent = `Favourite Pokémon: ${p.pokemon}`;
+            }
+        });
+    } else {
+        console.log("Elementos de perfil no encontrados en esta página.");
+    }
+
+
+
+    const container = document.getElementById("contact-us-container");
+    if (container) {
+        container.innerHTML = contactFormHTML;
+
+
+        const form = document.getElementById("contactForm");
+
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const email = document.getElementById("FormEmail").value;
+                const comment = document.getElementById("FormComment").value;
+                const timestamp = new Date().toISOString();
+
+                const messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
+                messages.push({ email, comment, timestamp });
+                localStorage.setItem("contactMessages", JSON.stringify(messages));
+
+                alert("Message saved!");
+                form.reset();
+            });
+        }
+    } else {
+        console.log("Contenedor 'contact-us-container' no encontrado en esta página.");
+    }
 });

@@ -112,6 +112,7 @@ nav a:hover {
 }
 
 .seccion-imagenes {
+  margin-top: 50px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -122,6 +123,7 @@ nav a:hover {
 }
 
 .seccion-imagenes2 {
+  margin-top: 50px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
